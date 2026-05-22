@@ -64,6 +64,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.9);backdrop-fil
 .li-url{font-size:.7rem;color:rgba(10,102,194,.8);text-align:center;margin-top:.2rem}
 .li-location{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.5rem}
 .li-flags{display:flex;gap:.75rem;justify-content:center;margin-top:.75rem;font-size:1.5rem}
+.li-flag{width:28px;height:21px;border-radius:3px;object-fit:cover;opacity:0.9;transition:opacity 0.2s}
+.li-flag:hover{opacity:1}
 
 /* ── SECTION HEADER ── */
 .sec-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.5rem}
@@ -368,7 +370,7 @@ footer a{color:var(--accent);text-decoration:none}
     <div class="bento cell-intro">
       <p class="hero-eyebrow" aria-hidden="true">Operations &amp; Business Strategy</p>
       <h1 class="hero-name" id="hero-name">Federico<br>Patronis</h1>
-      <p class="hero-role">Operations Leader &nbsp;·&nbsp; Business Strategy &nbsp;·&nbsp; AI Enthusiast &nbsp;·&nbsp; Hincha de Boca 🇦🇷</p>
+      <p class="hero-role">Operations Leader &nbsp;·&nbsp; Business Strategy &nbsp;·&nbsp; AI Enthusiast &nbsp;·&nbsp; Hincha de Boca</p>
     </div>
 
     <a class="bento cell-linkedin" href="https://www.linkedin.com/in/federico-patronis/" target="_blank" rel="noopener noreferrer" aria-label="View Federico Patronis on LinkedIn (opens in new tab)">
@@ -378,10 +380,10 @@ footer a{color:var(--accent);text-decoration:none}
         <p class="li-url">linkedin.com/in/federico-patronis</p>
         <p class="li-location">📍 South Tampa, FL &nbsp;·&nbsp; UTC−5 &nbsp;·&nbsp; Remote-ready</p>
         <div class="li-flags" aria-label="Languages: Spanish, English, Portuguese, Italian">
-          <span title="Spanish">🇦🇷</span>
-          <span title="English">🇺🇸</span>
-          <span title="Portuguese">🇧🇷</span>
-          <span title="Italian">🇮🇹</span>
+          <img src="https://flagcdn.com/24x18/ar.png" alt="Spanish" title="Spanish" class="li-flag">
+          <img src="https://flagcdn.com/24x18/us.png" alt="English" title="English" class="li-flag">
+          <img src="https://flagcdn.com/24x18/br.png" alt="Portuguese" title="Portuguese" class="li-flag">
+          <img src="https://flagcdn.com/24x18/it.png" alt="Italian" title="Italian" class="li-flag">
         </div>
       </div>
     </a>
