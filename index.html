@@ -186,83 +186,56 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.9);backdrop-fil
 .p-wday-name{font-size:12px;font-weight:500;color:#f0f0f0}
 
 /* SCOUT ── */
-.scout-layout{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-top:1.5rem}
-.scout-video-wrap{border-radius:16px;overflow:hidden;background:#000;position:sticky;top:72px;min-height:580px;display:flex;align-items:center}
-.scout-video{width:100%;display:block;border-radius:16px;height:100%;object-fit:cover}
-@media(max-width:768px){.scout-layout{grid-template-columns:1fr}.scout-video-wrap{position:static}}
-.scout-box{background:#0a0a0a;border:1px solid var(--border2);border-radius:20px;padding:1.25rem 1rem;margin-top:1.5rem;max-height:580px;overflow-y:auto}
-.scout-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
-.scout-brand-row{display:flex;align-items:center;gap:10px}
-.scout-icon-box{width:38px;height:38px;border-radius:10px;background:var(--s2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center}
-.scout-name{font-size:14px;font-weight:600;color:var(--text)}
-.scout-sub{font-size:10px;color:var(--muted);margin-top:1px;letter-spacing:.04em}
-.scout-clock{font-size:20px;font-weight:700;color:#22c55e;font-family:var(--mono);letter-spacing:.05em}
-.s-pipeline{display:flex;flex-direction:column;gap:2px;margin-bottom:1.25rem}
-.s-step{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border-radius:9px;border:1px solid transparent;transition:background .3s,border-color .3s}
-.s-step.active{background:var(--s2);border-color:var(--border2)}
-.s-step.done{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.2)}
-.s-ind{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--dim);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all .3s}
-.s-step.active .s-ind{border-color:#f59e0b;background:rgba(245,158,11,.1)}
-.s-step.done .s-ind{border-color:#22c55e;background:rgba(34,197,94,.12)}
-.s-dot{width:5px;height:5px;border-radius:50%;background:var(--dim)}
-.s-step.active .s-dot{background:#f59e0b}
-.s-step.done .s-dot{display:none}
-.s-chk{display:none;color:#22c55e;font-size:10px;font-weight:700}
-.s-step.done .s-chk{display:block}
-.s-body{flex:1;min-width:0}
-.s-title{font-size:11px;font-weight:500;color:var(--muted);transition:color .3s}
-.s-step.active .s-title{color:var(--text)}
-.s-step.done .s-title{color:#22c55e}
-.s-detail{font-size:9px;color:var(--dim);margin-top:2px;font-family:var(--mono);transition:color .3s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.s-step.active .s-detail{color:#f59e0b}
-.s-step.done .s-detail{color:rgba(34,197,94,.5)}
-.s-badge{margin-left:auto;font-size:9px;padding:2px 7px;border-radius:999px;font-family:var(--mono);flex-shrink:0;white-space:nowrap}
-.s-badge-dim{background:rgba(120,120,120,.1);color:var(--dim);border:1px solid var(--border)}
-.s-badge-run{background:rgba(245,158,11,.1);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
-.s-badge-ok{background:rgba(34,197,94,.1);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
-.s-divider{height:1px;background:var(--border);margin:1.25rem 0}
-.s-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:1.25rem}
-.s-stat{background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:8px 10px;text-align:center;opacity:0;transform:translateY(5px);transition:opacity .4s,transform .4s}
-.s-stat.show{opacity:1;transform:translateY(0)}
-.s-stat-val{font-size:16px;font-weight:700;color:var(--text);font-family:var(--mono)}
-.s-stat-lbl{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.06em;text-transform:uppercase}
-.s-report-title{font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
-.s-prop-cards{display:flex;flex-direction:column;gap:6px}
-.s-prop{border:1px solid var(--border);border-radius:11px;overflow:hidden;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
-.s-prop.show{opacity:1;transform:translateY(0)}
-.s-prop-inner{display:flex;align-items:stretch}
-.s-signal{width:4px;flex-shrink:0}
-.s-signal.move{background:#22c55e}
-.s-signal.push{background:#ef4444}
-.s-signal.wait{background:#f59e0b}
-.s-prop-body{flex:1;padding:9px 11px;display:flex;align-items:center;gap:10px}
-.s-thumb{width:44px;height:44px;border-radius:7px;background:var(--s3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;border:1px solid var(--border2)}
-.s-info{flex:1;min-width:0}
-.s-hood{font-size:10px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.s-price{font-size:14px;font-weight:700;color:var(--text);font-family:var(--mono);margin:2px 0}
-.s-meta{font-size:10px;color:var(--muted)}
-.s-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
-.s-sig-pill{font-size:9px;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.04em}
-.s-sig-move{background:rgba(34,197,94,.12);color:#22c55e;border:1px solid rgba(34,197,94,.2)}
-.s-sig-push{background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.2)}
-.s-sig-wait{background:rgba(245,158,11,.12);color:#f59e0b;border:1px solid rgba(245,158,11,.2)}
-.s-score{font-size:10px;color:var(--muted);font-family:var(--mono)}
-.s-email{border:1px solid rgba(34,197,94,.25);border-radius:12px;background:rgba(34,197,94,.07);padding:14px;display:flex;align-items:center;gap:12px;opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s;margin-top:1.25rem}
-.s-email.show{opacity:1;transform:translateY(0)}
-.s-email-icon{width:40px;height:40px;border-radius:9px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.s-email-from{font-size:10px;color:rgba(34,197,94,.6);letter-spacing:.06em;text-transform:uppercase}
-.s-email-subj{font-size:13px;font-weight:600;color:#22c55e;margin:3px 0}
-.s-email-prev{font-size:10px;color:rgba(34,197,94,.5)}
-.s-email-attach{display:flex;gap:5px;margin-top:7px}
-.s-attach{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:5px;padding:2px 7px;font-size:9px;color:rgba(34,197,94,.7);font-family:var(--mono)}
-.s-ctrl{display:flex;align-items:center;gap:8px;margin-top:1.25rem}
-.s-btn{padding:6px 14px;border-radius:7px;border:1px solid var(--border2);background:var(--s2);color:var(--text);font-size:11px;cursor:pointer;font-family:var(--sans);transition:background .15s}
-.s-btn:hover{background:var(--s3)}
-.s-btn.primary{background:#22c55e;color:#000;border-color:#22c55e;font-weight:600}
-.s-btn.primary:hover{opacity:.88}
-.s-prog-track{flex:1;height:2px;background:var(--s3);border-radius:1px;overflow:hidden}
-.s-prog-fill{height:100%;background:#22c55e;border-radius:1px;width:0%;transition:width .4s}
-.s-prog-lbl{font-size:10px;color:var(--muted);font-family:var(--mono);min-width:30px;text-align:right}
+.scout-video-wrap{border-radius:16px;overflow:hidden;background:#000;margin-top:1.5rem;aspect-ratio:16/9}
+.scout-video{width:100%;height:100%;display:block}
+
+.scout-timeline{display:flex;align-items:flex-start;gap:0;margin:2.5rem 0 0;position:relative}
+.scout-step-item{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.scout-step-icon{width:52px;height:52px;border-radius:50%;background:rgba(34,197,94,0.1);border:1.5px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;font-size:1.3rem;position:relative;z-index:2;transition:background 0.3s,border-color 0.3s}
+.scout-step-item:hover .scout-step-icon{background:rgba(34,197,94,0.2);border-color:rgba(34,197,94,0.6)}
+.scout-step-connector{position:absolute;top:26px;left:calc(50% + 26px);right:calc(-50% + 26px);height:1.5px;background:linear-gradient(90deg,rgba(34,197,94,0.4),rgba(34,197,94,0.1));z-index:1}
+.scout-step-item.last .scout-step-connector{display:none}
+.scout-step-label{font-size:0.82rem;font-weight:600;color:var(--text);margin-top:0.75rem;letter-spacing:0.01em}
+.scout-step-sub{font-size:0.72rem;color:var(--muted);line-height:1.5;margin-top:0.3rem;padding:0 0.5rem}
+
+.scout-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2rem 0}
+.scout-stat-box{background:var(--s1);border:1px solid var(--border);border-radius:14px;padding:1.25rem 1rem;text-align:center}
+.scout-stat-val{font-size:2rem;font-weight:700;color:var(--text);font-family:var(--mono);line-height:1}
+.scout-stat-lbl{font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;margin-top:0.4rem}
+
+.scout-report-label{font-size:0.72rem;font-weight:600;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem}
+.scout-cards{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem}
+.scout-card{display:flex;align-items:center;gap:1rem;background:var(--s1);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.3s}
+.scout-card:hover{border-color:rgba(34,197,94,0.25)}
+.scout-card-signal{width:4px;height:100%;min-height:72px;flex-shrink:0}
+.scout-card-signal.move{background:#22c55e}
+.scout-card-signal.push{background:#ef4444}
+.scout-card-signal.wait{background:#f59e0b}
+.scout-card-body{flex:1;padding:0.875rem 0.5rem}
+.scout-card-hood{font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase}
+.scout-card-price{font-size:1.1rem;font-weight:700;color:var(--text);font-family:var(--mono);margin:0.2rem 0}
+.scout-card-meta{font-size:0.78rem;color:var(--muted)}
+.scout-card-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;padding-right:1rem}
+.scout-sig-pill{font-size:0.72rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:999px;letter-spacing:0.04em;white-space:nowrap}
+.scout-sig-pill.move{background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.25)}
+.scout-sig-pill.push{background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.25)}
+.scout-sig-pill.wait{background:rgba(245,158,11,0.12);color:#f59e0b;border:1px solid rgba(245,158,11,0.25)}
+.scout-vision{font-size:0.72rem;color:var(--muted);font-family:var(--mono)}
+
+.scout-email-card{display:flex;align-items:center;gap:1rem;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:14px;padding:1.25rem}
+.scout-email-icon{width:42px;height:42px;border-radius:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.scout-email-from{font-size:0.72rem;color:rgba(34,197,94,0.6);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.3rem}
+.scout-email-subj{font-size:0.95rem;font-weight:600;color:#22c55e;margin-bottom:0.5rem}
+.scout-email-attach{display:flex;gap:0.5rem;flex-wrap:wrap}
+.scout-attach{background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:6px;padding:0.2rem 0.6rem;font-size:0.72rem;color:rgba(34,197,94,0.7);font-family:var(--mono)}
+
+@media(max-width:640px){
+  .scout-timeline{flex-direction:column;gap:1.5rem}
+  .scout-step-connector{display:none}
+  .scout-stats-row{grid-template-columns:1fr 1fr}
+  .scout-card-meta{display:none}
+  .scout-email-card{flex-direction:column;text-align:center}
+}
 
 /* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
@@ -347,22 +320,6 @@ footer a{color:var(--accent);text-decoration:none}
   .phone-wrap{padding:.5rem 0}
   .phone{width:min(320px, calc(100vw - 2.2rem));height:680px;border-radius:44px;border-width:8px}
 
-  .scout-box{padding:1.25rem 1rem}
-  .scout-hdr{flex-direction:column;align-items:flex-start;gap:.75rem}
-  .s-step{padding:7px 8px}
-  .s-title{font-size:11px}
-  .s-detail{white-space:normal;font-size:10px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-  .s-stats{grid-template-columns:1fr 1fr}
-  .s-stat-lbl{font-size:10px}
-  .s-prop-body{gap:7px}
-  .s-thumb{width:36px;height:36px;font-size:14px}
-  .s-price{font-size:12px}
-  .s-meta{display:none}
-  .s-email{flex-direction:column;gap:10px}
-  .s-email-attach{flex-wrap:wrap}
-  .s-ctrl{flex-wrap:wrap;gap:6px}
-  .s-prog-track{flex:1 1 100%;order:3}
-
   .contact-grid{grid-template-columns:1fr}
   .cf .form-row{grid-template-columns:1fr}
 
@@ -376,7 +333,6 @@ footer a{color:var(--accent);text-decoration:none}
   .hero-name{font-size:2rem}
   .g3{grid-template-columns:1fr}
   .g3 img{height:180px}
-  .s-badge{display:none}
 }
 </style>
 </head>
@@ -779,70 +735,107 @@ footer a{color:var(--accent);text-decoration:none}
   <h2 class="sec-title" style="margin-bottom:1rem">Buenos Aires Scout — disciplined,<br>tireless, opinionated</h2>
   <p style="font-size:.95rem;color:var(--muted);line-height:1.85;max-width:640px;margin-bottom:1.5rem">Every Sunday at 10 AM, this agent wakes up on its own. It scrapes two Argentine listing platforms across 9 GBA Norte neighborhoods, deduplicates across sources, scores every property with Claude Vision, runs a deal signal engine against historical baselines, and lands in your inbox 10 minutes later with a clear verdict: <em>move now, push hard, wait and watch, or skip.</em> Hit run to watch the pipeline fire.</p>
 
-  <div class="scout-layout">
-  <div class="scout-box" role="region" aria-label="BA Scout pipeline demo">
-    <div class="scout-hdr">
-      <div class="scout-brand-row">
-        <div class="scout-icon-box">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v3l2 2"/></svg>
-        </div>
-        <div>
-          <div class="scout-name">Buenos Aires Scout</div>
-          <div class="scout-sub">GBA Norte · 9 neighborhoods · Weekly</div>
-        </div>
-      </div>
-      <div class="scout-clock" id="s-clock" aria-live="polite">SUN 10:00</div>
+<!-- VIDEO — full width -->
+<div class="scout-video-wrap">
+  <video class="scout-video" muted preload="metadata" controls>
+    <source src="scout-demo.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- PIPELINE TIMELINE — 5 horizontal steps -->
+<div class="scout-timeline" aria-label="How the BA Scout pipeline works">
+  <div class="scout-step-item">
+    <div class="scout-step-icon">💾</div>
+    <div class="scout-step-connector"></div>
+    <div class="scout-step-label">Load memory</div>
+    <div class="scout-step-sub">listing_history.json · feedback_log · config</div>
+  </div>
+  <div class="scout-step-item">
+    <div class="scout-step-icon">🔍</div>
+    <div class="scout-step-connector"></div>
+    <div class="scout-step-label">Scrape sources</div>
+    <div class="scout-step-sub">MercadoLibre + Argenprop · 9 neighborhoods · parallel</div>
+  </div>
+  <div class="scout-step-item">
+    <div class="scout-step-icon">🤖</div>
+    <div class="scout-step-connector"></div>
+    <div class="scout-step-label">Claude Vision</div>
+    <div class="scout-step-sub">Score condition · amenities · classification per listing</div>
+  </div>
+  <div class="scout-step-item">
+    <div class="scout-step-icon">⚡</div>
+    <div class="scout-step-connector"></div>
+    <div class="scout-step-label">Deal signals</div>
+    <div class="scout-step-sub">Price vs baseline · DOM · price drops · feedback comps</div>
+  </div>
+  <div class="scout-step-item last">
+    <div class="scout-step-icon">📬</div>
+    <div class="scout-step-label">Sunday briefing</div>
+    <div class="scout-step-sub">PDF + Excel → Gmail inbox · history updated</div>
+  </div>
+</div>
+
+<!-- STATS ROW -->
+<div class="scout-stats-row">
+  <div class="scout-stat-box"><div class="scout-stat-val">185</div><div class="scout-stat-lbl">Raw listings</div></div>
+  <div class="scout-stat-box"><div class="scout-stat-val">31</div><div class="scout-stat-lbl">After filters</div></div>
+  <div class="scout-stat-box"><div class="scout-stat-val">31</div><div class="scout-stat-lbl">AI scored</div></div>
+  <div class="scout-stat-box"><div class="scout-stat-val">2</div><div class="scout-stat-lbl">Actionable</div></div>
+</div>
+
+<!-- SAMPLE REPORT CARDS -->
+<div class="scout-report-label">This week's briefing</div>
+<div class="scout-cards">
+  <div class="scout-card">
+    <div class="scout-card-signal move"></div>
+    <div class="scout-card-body">
+      <div class="scout-card-hood">Olivos</div>
+      <div class="scout-card-price">USD 138,000</div>
+      <div class="scout-card-meta">72 m² · USD 1,916/m² · 4 days on market</div>
     </div>
-
-    <div class="s-pipeline" id="s-pipeline" role="list">
-      <div class="s-step" data-step="0" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Load persistent memory</div><div class="s-detail">listing_history.json · feedback_log.json · scout_config.json</div></div><span class="s-badge s-badge-dim">step 1</span></div>
-      <div class="s-step" data-step="1" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Scrape MercadoLibre — 9 neighborhoods</div><div class="s-detail">Playwright · anti-detection · ThreadPoolExecutor parallel</div></div><span class="s-badge s-badge-dim">step 2</span></div>
-      <div class="s-step" data-step="2" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Scrape Argenprop — 6 neighborhoods</div><div class="s-detail">Parallel run · 3 ML-only zones (San Isidro, Florida, V.López)</div></div><span class="s-badge s-badge-dim">step 3</span></div>
-      <div class="s-step" data-step="3" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Cross-source deduplication</div><div class="s-detail">Match: neighborhood + price + size ±3m² · ML canonical</div></div><span class="s-badge s-badge-dim">step 4</span></div>
-      <div class="s-step" data-step="4" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Filter: history + hard constraints</div><div class="s-detail">45–120m² · max USD 200K · net-new listings only</div></div><span class="s-badge s-badge-dim">step 5</span></div>
-      <div class="s-step" data-step="5" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Claude Vision scoring</div><div class="s-detail">claude-sonnet · condition + amenities + classification</div></div><span class="s-badge s-badge-dim">step 6</span></div>
-      <div class="s-step" data-step="6" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Deal signal engine</div><div class="s-detail">Vision + price vs. baseline + DOM + price Δ + feedback comps</div></div><span class="s-badge s-badge-dim">step 7</span></div>
-      <div class="s-step" data-step="7" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Generate PDF + Excel report</div><div class="s-detail">ReportLab PDF · full tabular Excel · thumbnails embedded</div></div><span class="s-badge s-badge-dim">step 8</span></div>
-      <div class="s-step" data-step="8" role="listitem"><div class="s-ind"><div class="s-dot"></div><span class="s-chk">✓</span></div><div class="s-body"><div class="s-title">Deliver via Gmail OAuth · update memory</div><div class="s-detail">Both files attached · listing_history.json updated for next run</div></div><span class="s-badge s-badge-dim">step 9</span></div>
-    </div>
-
-    <div class="s-divider"></div>
-
-    <div class="s-stats" id="s-stats">
-      <div class="s-stat" id="ss-0"><div class="s-stat-val" id="sv-0">—</div><div class="s-stat-lbl">Raw listings</div></div>
-      <div class="s-stat" id="ss-1"><div class="s-stat-val" id="sv-1">—</div><div class="s-stat-lbl">After filters</div></div>
-      <div class="s-stat" id="ss-2"><div class="s-stat-val" id="sv-2">—</div><div class="s-stat-lbl">AI scored</div></div>
-      <div class="s-stat" id="ss-3"><div class="s-stat-val" id="sv-3">—</div><div class="s-stat-lbl">Actionable</div></div>
-    </div>
-
-    <div class="s-report-title">This week's briefing</div>
-    <div class="s-prop-cards">
-      <div class="s-prop" id="sp-0"><div class="s-prop-inner"><div class="s-signal move"></div><div class="s-prop-body"><div class="s-thumb">🏢</div><div class="s-info"><div class="s-hood">Olivos</div><div class="s-price">USD 138,000</div><div class="s-meta">72 m² · USD 1,916/m² · 4 days</div></div><div class="s-right"><span class="s-sig-pill s-sig-move">Move Now</span><span class="s-score">Vision 8.1/10</span></div></div></div></div>
-      <div class="s-prop" id="sp-1"><div class="s-prop-inner"><div class="s-signal push"></div><div class="s-prop-body"><div class="s-thumb">🏠</div><div class="s-info"><div class="s-hood">Martínez</div><div class="s-price">USD 172,000</div><div class="s-meta">95 m² · USD 1,810/m² · 38 days · price ↓ 2×</div></div><div class="s-right"><span class="s-sig-pill s-sig-push">Push Hard</span><span class="s-score">Vision 7.4/10</span></div></div></div></div>
-      <div class="s-prop" id="sp-2"><div class="s-prop-inner"><div class="s-signal wait"></div><div class="s-prop-body"><div class="s-thumb">🏗️</div><div class="s-info"><div class="s-hood">La Lucila</div><div class="s-price">USD 159,000</div><div class="s-meta">68 m² · USD 2,338/m² · 6 days</div></div><div class="s-right"><span class="s-sig-pill s-sig-wait">Wait & Watch</span><span class="s-score">Vision 6.8/10</span></div></div></div></div>
-    </div>
-
-    <div class="s-email" id="s-email" aria-live="polite">
-      <div class="s-email-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-      <div>
-        <div class="s-email-from">BA Scout → Federico Patronis</div>
-        <div class="s-email-subj">Scout report — 2 properties worth your attention</div>
-        <div class="s-email-prev">Move Now: Olivos 72m² · Push Hard: Martínez seller motivated</div>
-        <div class="s-email-attach"><span class="s-attach">scout_report_20260521.pdf</span><span class="s-attach">scout_data_20260521.xlsx</span></div>
-      </div>
-    </div>
-
-    <div class="s-ctrl">
-      <button class="s-btn primary" id="s-play" aria-label="Run the scout pipeline">▶ Run scout</button>
-      <button class="s-btn" id="s-reset" aria-label="Reset animation">↺ Reset</button>
-      <div class="s-prog-track"><div class="s-prog-fill" id="s-prog"></div></div>
-      <span class="s-prog-lbl" id="s-lbl">0/9</span>
+    <div class="scout-card-right">
+      <span class="scout-sig-pill move">Move Now</span>
+      <span class="scout-vision">Vision 8.1/10</span>
     </div>
   </div>
-  <div class="scout-video-wrap">
-    <video class="scout-video" muted preload="metadata" controls>
-      <source src="scout-demo.mp4" type="video/mp4">
-    </video>
+  <div class="scout-card">
+    <div class="scout-card-signal push"></div>
+    <div class="scout-card-body">
+      <div class="scout-card-hood">Martínez</div>
+      <div class="scout-card-price">USD 172,000</div>
+      <div class="scout-card-meta">95 m² · USD 1,810/m² · 38 days · price ↓ 2×</div>
+    </div>
+    <div class="scout-card-right">
+      <span class="scout-sig-pill push">Push Hard</span>
+      <span class="scout-vision">Vision 7.4/10</span>
+    </div>
+  </div>
+  <div class="scout-card">
+    <div class="scout-card-signal wait"></div>
+    <div class="scout-card-body">
+      <div class="scout-card-hood">La Lucila</div>
+      <div class="scout-card-price">USD 159,000</div>
+      <div class="scout-card-meta">68 m² · USD 2,338/m² · 6 days on market</div>
+    </div>
+    <div class="scout-card-right">
+      <span class="scout-sig-pill wait">Wait & Watch</span>
+      <span class="scout-vision">Vision 6.8/10</span>
+    </div>
+  </div>
+</div>
+
+<!-- EMAIL CARD -->
+<div class="scout-email-card">
+  <div class="scout-email-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+  </div>
+  <div class="scout-email-body">
+    <div class="scout-email-from">BA Scout → Federico Patronis · Every Sunday 10 AM</div>
+    <div class="scout-email-subj">Scout report — 2 properties worth your attention</div>
+    <div class="scout-email-attach">
+      <span class="scout-attach">scout_report_20260521.pdf</span>
+      <span class="scout-attach">scout_data_20260521.xlsx</span>
+    </div>
   </div>
 </div>
 </div>
@@ -1006,91 +999,6 @@ function sendChat() {
     thread.appendChild(bDiv);
   }, 500);
 }
-
-/* ── SCOUT ANIMATION ── */
-const sSteps = document.querySelectorAll('.s-step');
-const sStatBoxes = [0,1,2,3].map(i => document.getElementById('ss-' + i));
-const sStatVals = [0,1,2,3].map(i => document.getElementById('sv-' + i));
-const sProps = [0,1,2].map(i => document.getElementById('sp-' + i));
-const sEmail = document.getElementById('s-email');
-const sClock = document.getElementById('s-clock');
-const sPlay = document.getElementById('s-play');
-const sReset = document.getElementById('s-reset');
-const sProg = document.getElementById('s-prog');
-const sLbl = document.getElementById('s-lbl');
-let sRunning = false, sCur = -1, sTimeouts = [];
-const sStepActive = ['Reading 3 JSON memory files…','Playwright scraping 9 neighborhoods…','Scraping 6 Argenprop neighborhoods…','Collapsing cross-platform duplicates…','Filtering budget, size, history…','claude-sonnet analyzing thumbnails…','Computing deal signals…','Generating PDF + Excel…','Sending via Gmail OAuth…'];
-const sStepDone = ['Memory loaded · 847 properties in history','MercadoLibre · 9/9 · 134 listings','Argenprop · 6/6 · 51 listings','23 dupes removed · ML canonical','Net-new passing filters: 31','31 listings scored · avg vision 6.9/10','2 Move Now · 1 Push Hard · 8 Wait & Watch','scout_report_20260521.pdf + .xlsx generated','Delivered · history updated for next run'];
-const sClocks = ['SUN 10:00','SUN 10:01','SUN 10:02','SUN 10:03','SUN 10:04','SUN 10:05','SUN 10:06','SUN 10:08','SUN 10:09'];
-
-function sQ(fn, ms) { sTimeouts.push(setTimeout(fn, ms)); }
-function sCount(el, n, ms) {
-  let c = 0, steps = 20, inc = n / steps;
-  const iv = setInterval(() => { c = Math.min(c + inc, n); el.textContent = Math.round(c); if (c >= n) clearInterval(iv); }, ms / steps);
-}
-
-function runScout() {
-  if (sRunning) return;
-  sRunning = true;
-  sPlay.disabled = true;
-  sPlay.textContent = '⟳ Running…';
-  let delay = 0;
-  sSteps.forEach((step, i) => {
-    const det = step.querySelector('.s-detail');
-    const badge = step.querySelector('.s-badge');
-    sQ(() => {
-      if (sCur >= 0) sSteps[sCur].classList.remove('active');
-      step.classList.add('active');
-      det.textContent = sStepActive[i];
-      badge.textContent = 'running';
-      badge.className = 's-badge s-badge-run';
-      sClock.textContent = sClocks[i];
-      sCur = i;
-      sProg.style.width = ((i + 1) / 9 * 100) + '%';
-      sLbl.textContent = (i + 1) + '/9';
-    }, delay);
-    delay += 700;
-    sQ(() => {
-      step.classList.remove('active');
-      step.classList.add('done');
-      det.textContent = sStepDone[i];
-      badge.textContent = 'done';
-      badge.className = 's-badge s-badge-ok';
-      if (i === 1) { sStatBoxes[0].classList.add('show'); sCount(sStatVals[0], 185, 400); }
-      if (i === 4) { sStatBoxes[1].classList.add('show'); sCount(sStatVals[1], 31, 400); }
-      if (i === 5) { sStatBoxes[2].classList.add('show'); sCount(sStatVals[2], 31, 400); }
-      if (i === 6) { sStatBoxes[3].classList.add('show'); sCount(sStatVals[3], 2, 300); sProps[0].classList.add('show'); sQ(() => sProps[1].classList.add('show'), 150); sQ(() => sProps[2].classList.add('show'), 300); }
-    }, delay);
-    delay += 200;
-  });
-  sQ(() => {
-    sEmail.classList.add('show');
-    sPlay.textContent = '✓ Complete';
-    sPlay.style.background = 'rgba(34,197,94,.15)';
-    sPlay.style.color = '#22c55e';
-    sPlay.style.borderColor = 'rgba(34,197,94,.25)';
-    sRunning = false;
-  }, delay + 300);
-}
-
-function resetScout() {
-  sTimeouts.forEach(clearTimeout); sTimeouts = [];
-  sRunning = false; sCur = -1;
-  sSteps.forEach((step, i) => {
-    step.classList.remove('active','done');
-    step.querySelector('.s-detail').textContent = ['listing_history.json · feedback_log.json · scout_config.json','Playwright · anti-detection · ThreadPoolExecutor parallel','Parallel run · 3 ML-only zones (San Isidro, Florida, V.López)','Match: neighborhood + price + size ±3m² · ML canonical','45–120m² · max USD 200K · net-new listings only','claude-sonnet · condition + amenities + classification','Vision + price vs. baseline + DOM + price Δ + feedback comps','ReportLab PDF · full tabular Excel · thumbnails embedded','Both files attached · listing_history.json updated for next run'][i];
-    const b = step.querySelector('.s-badge'); b.textContent = 'step ' + (i + 1); b.className = 's-badge s-badge-dim';
-  });
-  sStatBoxes.forEach((b, i) => { b.classList.remove('show'); sStatVals[i].textContent = '—'; });
-  sProps.forEach(p => p.classList.remove('show'));
-  sEmail.classList.remove('show');
-  sProg.style.width = '0%'; sLbl.textContent = '0/9'; sClock.textContent = 'SUN 10:00';
-  sPlay.disabled = false; sPlay.textContent = '▶ Run scout';
-  sPlay.style.background = ''; sPlay.style.color = ''; sPlay.style.borderColor = '';
-}
-
-sPlay.addEventListener('click', runScout);
-sReset.addEventListener('click', resetScout);
 
 /* ── HAMBURGER NAV ── */
 const hamburger = document.getElementById('hamburger');
