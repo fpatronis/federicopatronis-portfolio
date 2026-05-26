@@ -8,7 +8,9 @@
       "Bash(git remote *)",
       "Bash(git pull *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\patro\\\\Documents\\\\Portfolio website\" -Recurse -File)",
-      "Bash(Select-Object -ExpandProperty FullName)"
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Get-Content \"C:\\\\Users\\\\patro\\\\Documents\\\\Portfolio website\\\\index.html\" -TotalCount 495)",
+      "Bash(Select-Object -Last 50)"
     ]
   }
 }
