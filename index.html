@@ -337,6 +337,11 @@ footer a{color:var(--accent);text-decoration:none}
 #lb img{max-width:95vw;max-height:92vh;object-fit:contain;cursor:default}
 #lb-close{position:fixed;top:1rem;right:1.25rem;color:#fff;font-size:2rem;line-height:1;background:none;border:none;cursor:pointer;z-index:10000;opacity:.8}
 #lb-close:hover{opacity:1}
+#lb-prev,#lb-next{position:fixed;top:50%;transform:translateY(-50%);color:#fff;font-size:3rem;line-height:1;background:rgba(0,0,0,.4);border:none;cursor:pointer;z-index:10000;padding:.25rem .75rem;border-radius:4px;opacity:.7;transition:opacity .15s}
+#lb-prev{left:1rem}
+#lb-next{right:1rem}
+#lb-prev:hover,#lb-next:hover{opacity:1}
+#lb-counter{position:fixed;bottom:1.25rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.85rem;font-family:'DM Sans',sans-serif;letter-spacing:.05em}
 </style>
 </head>
 <body>
@@ -1079,19 +1084,36 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 </script>
 <div id="lb" role="dialog" aria-modal="true">
   <button id="lb-close" aria-label="Close">&#xD7;</button>
+  <button id="lb-prev" aria-label="Previous">&#8249;</button>
   <img id="lb-img" src="" alt="">
+  <button id="lb-next" aria-label="Next">&#8250;</button>
+  <div id="lb-counter"></div>
 </div>
 <script>
 (function(){
   var lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbClose=document.getElementById('lb-close');
-  function openLb(src,alt){lbImg.src=src;lbImg.alt=alt||'';lb.classList.add('open');}
-  function closeLb(){lb.classList.remove('open');lbImg.src='';}
+  var imgs=[],cur=0;
   document.querySelectorAll('.g2 img,.g3 img,.img-full').forEach(function(img){
-    img.addEventListener('click',function(){openLb(img.src,img.alt);});
+    imgs.push(img);
+    img.addEventListener('click',function(){openLb(imgs.indexOf(img));});
   });
+  function openLb(idx){cur=idx;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].alt||'';lb.classList.add('open');updateNav();}
+  function closeLb(){lb.classList.remove('open');lbImg.src='';}
+  function prev(){cur=(cur-1+imgs.length)%imgs.length;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].alt||'';updateNav();}
+  function next(){cur=(cur+1)%imgs.length;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].alt||'';updateNav();}
+  function updateNav(){
+    document.getElementById('lb-counter').textContent=(cur+1)+' / '+imgs.length;
+  }
   lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
   lbClose.addEventListener('click',closeLb);
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+  document.getElementById('lb-prev').addEventListener('click',function(e){e.stopPropagation();prev();});
+  document.getElementById('lb-next').addEventListener('click',function(e){e.stopPropagation();next();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowLeft')prev();
+    if(e.key==='ArrowRight')next();
+  });
 })();
 </script>
 </body>
