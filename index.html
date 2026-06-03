@@ -130,66 +130,79 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.9);backdrop-fil
 
 /* PROFE ── */
 .phone-wrap{display:flex;justify-content:center;padding:2rem 0}
-.phone{width:340px;height:736px;background:#000;border-radius:50px;border:9px solid #1c1c1e;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:130px;height:30px;background:#1c1c1e;border-radius:0 0 20px 20px;z-index:50}
-.p-status{height:46px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 20px 5px;flex-shrink:0;z-index:40}
-.p-time{font-size:14px;font-weight:600;color:#f0f0f0;font-family:var(--sans)}
-.p-icons{font-size:11px;color:#f0f0f0;display:flex;gap:5px}
-.p-screen{flex:1;overflow:hidden;display:flex;flex-direction:column}
-.p-scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:0 0 65px;scrollbar-width:none}
-.p-scroll::-webkit-scrollbar{display:none}
-.p-nav{height:75px;background:rgba(20,20,20,.97);border-top:.5px solid #2a2a2a;display:flex;align-items:flex-start;padding-top:8px;flex-shrink:0}
-.p-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:4px 0}
-.p-tab svg{width:22px;height:22px;stroke:#444;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .15s}
-.p-tab span{font-size:9px;color:#444;font-family:var(--sans);transition:color .15s}
-.p-tab.active svg{stroke:#22c55e}
-.p-tab.active span{color:#22c55e}
-.p-header{padding:12px 16px 8px;display:flex;align-items:center;justify-content:space-between;border-bottom:.5px solid #1c1c1c}
-.p-app-title{font-size:19px;font-weight:700;color:#f0f0f0;font-family:var(--sans);letter-spacing:-.2px}
-.p-badge{padding:3px 9px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.06em;background:#22c55e;color:#000}
-.p-card{background:#1a1a1a;border:.5px solid #2a2a2a;border-radius:14px;margin:8px 10px 0;padding:12px}
-.p-card-title{font-size:11px;font-weight:600;color:#555;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-.p-pill{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;font-size:10px;font-weight:600}
-.p-pill-g{background:rgba(34,197,94,.12);color:#22c55e;border:1px solid rgba(34,197,94,.25)}
-.p-pill-a{background:rgba(245,158,11,.12);color:#f59e0b;border:1px solid rgba(245,158,11,.25)}
-.p-pill-r{background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.25)}
-.p-pill-b{background:rgba(59,130,246,.12);color:#3b82f6;border:1px solid rgba(59,130,246,.25)}
-.p-pill-gray{background:#222;color:#666;border:1px solid #2a2a2a}
-.p-text{font-size:11px;color:#777;line-height:1.6;font-family:var(--sans)}
-.p-text b{color:#f0f0f0}
-.p-weather{display:flex;gap:5px}
-.p-wslot{flex:1;background:#222;border-radius:10px;padding:6px 4px;display:flex;flex-direction:column;gap:2px;align-items:center}
-.p-wlbl{font-size:9px;color:#555}
-.p-wtemp{font-size:13px;font-weight:600;color:#f0f0f0}
-.p-wdet{font-size:9px;color:#666}
-.p-row{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:.5px solid #222}
-.p-row:last-child{border-bottom:none}
-.p-rname{font-size:11px;color:#f0f0f0}
-.p-rdet{font-size:10px;color:#555}
-.p-ci-row{display:flex;gap:4px}
-.p-ci-btn{flex:1;padding:6px 3px;border-radius:9px;border:1px solid #2a2a2a;background:transparent;color:#555;font-size:11px;cursor:pointer;font-family:var(--sans);transition:all .15s;text-align:center}
-.p-ci-btn.sel-l{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.3);color:#ef4444}
-.p-ci-btn.sel-m{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3);color:#f59e0b}
-.p-ci-btn.sel-h{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.25);color:#22c55e}
-.p-submit{width:100%;margin-top:8px;padding:9px;background:#22c55e;border:none;border-radius:10px;font-size:12px;font-weight:700;color:#000;cursor:pointer;font-family:var(--sans)}
-.p-chat-bubble{max-width:78%;padding:7px 11px;border-radius:14px;font-size:11px;line-height:1.5}
-.p-chat-bot{background:#222;color:#f0f0f0;border-radius:14px 14px 14px 3px;border:.5px solid #2a2a2a;margin-bottom:8px}
-.p-chat-user{background:#22c55e;color:#000;border-radius:14px 14px 3px 14px;margin-left:auto;margin-bottom:8px}
-.p-chat-input{flex:1;background:#222;border:.5px solid #2a2a2a;border-radius:999px;padding:7px 12px;color:#f0f0f0;font-size:11px;outline:none}
-.p-chat-input::placeholder{color:#444}
-.p-send{width:28px;height:28px;border-radius:50%;background:#22c55e;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.p-prog-track{height:4px;background:#222;border-radius:2px;overflow:hidden;margin:6px 0 10px}
-.p-prog-fill{height:100%;border-radius:2px}
-.p-section-lbl{font-size:10px;font-weight:700;color:#444;letter-spacing:.1em;text-transform:uppercase;padding:12px 14px 5px}
-.p-act-card{background:#1a1a1a;border:.5px solid #2a2a2a;border-radius:12px;margin:6px 10px 0;padding:10px}
-.p-stat-val{font-size:20px;font-weight:700;color:#f0f0f0;text-align:center}
-.p-stat-lbl{font-size:10px;color:#444;text-align:center;margin-top:2px}
-.p-week-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:.5px solid #1c1c1c}
-.p-week-row:last-child{border-bottom:none}
-.p-week-row.today .p-wday-name{color:#22c55e}
-.p-week-row.done .p-wday-name{color:#444;text-decoration:line-through}
-.p-wday-lbl{font-size:11px;color:#444;width:26px}
-.p-wday-name{font-size:12px;font-weight:500;color:#f0f0f0}
+.profe-phone{width:300px;aspect-ratio:390/844;border-radius:44px;background:#000;box-shadow:0 0 0 2px #333,0 25px 60px rgba(0,0,0,.5);overflow:hidden;display:flex;flex-direction:column;font-family:'DM Sans',sans-serif}
+.profe-screen{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.profe-header{padding:20px 16px 10px;background:#000;flex-shrink:0}
+.profe-date{color:#22c55e;font-size:11px;font-weight:600;letter-spacing:.12em}
+.profe-day-row{display:flex;align-items:center;justify-content:space-between;margin-top:2px}
+.profe-day{color:#fff;font-size:28px;font-weight:800;line-height:1}
+.profe-session-pill{background:#22c55e;border-radius:8px;padding:4px 8px;display:flex;flex-direction:column;align-items:center}
+.pill-label{font-size:9px;color:#fff;letter-spacing:.1em;text-transform:uppercase}
+.pill-value{font-size:14px;color:#fff;font-weight:700}
+.profe-content{flex:1;overflow-y:auto;scrollbar-width:none}
+.profe-content::-webkit-scrollbar{display:none}
+.profe-panel{display:none;flex-direction:column;gap:10px;padding:10px 12px 16px}
+.profe-panel.active{display:flex}
+.profe-card{background:#1c1c1c;border-radius:14px;padding:12px}
+.profe-section-lbl{color:#9ca3af;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.profe-tabbar{display:flex;background:#000;border-top:1px solid #222;padding:6px 0 10px;flex-shrink:0}
+.profe-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;padding:4px 0;color:#6b7280;user-select:none}
+.profe-tab.active{color:#22c55e}
+.profe-tab.active .profe-tab-lbl{border-bottom:2px solid #22c55e;padding-bottom:1px}
+.profe-tab-icon{font-size:16px}
+.profe-tab-lbl{font-size:10px;font-weight:500}
+/* card internals */
+.profe-quote-card{border-left:3px solid #22c55e;padding:10px 10px 10px 12px;background:#1c1c1c;border-radius:0 14px 14px 0}
+.profe-quote-text{color:#f0f0f0;font-size:11px;line-height:1.6;font-style:italic}
+.profe-quote-attr{color:#6b7280;font-size:10px;margin-top:4px}
+.profe-weather-row{display:flex;gap:5px;margin-top:8px}
+.profe-wslot{flex:1;background:#2a2a2a;border-radius:10px;padding:6px 4px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.profe-wlbl{font-size:9px;color:#6b7280}
+.profe-wtemp{font-size:13px;font-weight:600;color:#fff}
+.profe-wemoji{font-size:14px;line-height:1}
+.profe-wdet{font-size:9px;color:#6b7280}
+.profe-badge{padding:1px 6px;border-radius:999px;font-size:9px;font-weight:700;border:1px solid transparent}
+.profe-badge-g{background:rgba(34,197,94,.12);color:#22c55e;border-color:rgba(34,197,94,.3)}
+.profe-badge-a{background:rgba(245,158,11,.12);color:#f59e0b;border-color:rgba(245,158,11,.3)}
+.profe-badge-r{background:rgba(239,68,68,.12);color:#ef4444;border-color:rgba(239,68,68,.3)}
+.profe-badge-b{background:rgba(59,130,246,.12);color:#3b82f6;border-color:rgba(59,130,246,.3)}
+.profe-badge-gray{background:#222;color:#6b7280;border-color:#333}
+.profe-macro-bar{height:6px;border-radius:3px;overflow:hidden;display:flex;gap:1px;margin:6px 0 8px}
+.profe-macro-seg{height:100%;border-radius:2px}
+.profe-chat-input{background:#2a2a2a;border-radius:20px;padding:8px 12px;color:#6b7280;font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.profe-chip-row{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.profe-chip{padding:3px 8px;border-radius:999px;font-size:10px;font-weight:500;background:#2a2a2a;color:#9ca3af;border:1px solid #333}
+.profe-chip.rdy{background:rgba(34,197,94,.1);color:#22c55e;border-color:rgba(34,197,94,.3)}
+.profe-chip.warn{background:rgba(245,158,11,.1);color:#f59e0b;border-color:rgba(245,158,11,.3)}
+.profe-chip.sore{background:rgba(239,68,68,.1);color:#ef4444;border-color:rgba(239,68,68,.3)}
+.profe-day-type-row{display:flex;gap:6px;margin-top:8px}
+.profe-type-pill{flex:1;background:#2a2a2a;border-radius:10px;padding:8px;text-align:center}
+.profe-type-pill-label{font-size:9px;color:#6b7280;letter-spacing:.08em;text-transform:uppercase}
+.profe-type-pill-val{font-size:13px;font-weight:700;color:#22c55e;margin-top:2px}
+.profe-ex-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:.5px solid #2a2a2a;gap:6px}
+.profe-ex-row:last-child{border-bottom:none}
+.profe-ex-name{font-size:11px;color:#f0f0f0}
+.profe-ex-det{font-size:10px;color:#6b7280;margin-top:1px}
+.profe-stats-pair{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.profe-stat-box{background:#2a2a2a;border-radius:10px;padding:10px;text-align:center}
+.profe-stat-val{font-size:20px;font-weight:700;color:#f0f0f0}
+.profe-stat-sub{font-size:10px;color:#6b7280;margin-top:2px}
+.profe-cal-row{display:flex;align-items:center;justify-content:space-between;padding:4px 0}
+.profe-body-row{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:.5px solid #2a2a2a}
+.profe-body-row:last-child{border-bottom:none}
+.profe-body-lbl{font-size:11px;color:#f0f0f0}
+.profe-body-val{font-size:11px;color:#6b7280}
+.profe-ask-btn{width:100%;margin-top:10px;padding:9px;background:#26a69a;border:none;border-radius:10px;font-size:12px;font-weight:700;color:#fff;cursor:pointer;font-family:'DM Sans',sans-serif}
+.profe-log-input{width:100%;background:#2a2a2a;border:1px solid #333;border-radius:8px;padding:7px 10px;color:#f0f0f0;font-size:12px;font-family:'DM Sans',sans-serif;outline:none;margin-top:4px;box-sizing:border-box}
+.profe-log-input::placeholder{color:#6b7280}
+.profe-log-label{font-size:10px;color:#9ca3af;margin-top:8px;display:block}
+.profe-log-btn{width:100%;margin-top:8px;padding:8px;background:#22c55e;border:none;border-radius:10px;font-size:12px;font-weight:700;color:#000;cursor:pointer;font-family:'DM Sans',sans-serif;opacity:.5}
+.profe-entry-row{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:.5px solid #2a2a2a}
+.profe-entry-row:last-child{border-bottom:none}
+.profe-entry-date{font-size:10px;color:#6b7280}
+.profe-entry-val{font-size:11px;color:#22c55e;font-weight:600}
+.profe-act-card{background:#1c1c1c;border-radius:14px;padding:10px}
+.profe-strava-tag{background:rgba(252,82,0,.15);color:#fc5200;border:1px solid rgba(252,82,0,.3);padding:1px 6px;border-radius:999px;font-size:9px;font-weight:700}
 
 /* SCOUT ── */
 .scout-video-wrap{border-radius:16px;overflow:hidden;background:#000;margin-top:1.5rem;aspect-ratio:16/9}
@@ -316,6 +329,7 @@ footer a{color:var(--accent);text-decoration:none}
 
   .phone-wrap{padding:.5rem 0}
   .phone{width:min(320px, calc(100vw - 2.2rem));height:680px;border-radius:44px;border-width:8px}
+  .profe-phone{width:min(280px,calc(100vw - 2rem))}
 
   .contact-grid{grid-template-columns:1fr}
   .cf .form-row{grid-template-columns:1fr}
@@ -327,6 +341,7 @@ footer a{color:var(--accent);text-decoration:none}
 /* ── SMALL PHONES: ≤375px ── */
 @media(max-width:375px){
   .phone{height:620px}
+  .profe-phone{width:min(260px,calc(100vw - 1.5rem))}
   .hero-name{font-size:2rem}
   .g3{grid-template-columns:1fr}
   .g3 img{height:180px}
@@ -532,205 +547,423 @@ footer a{color:var(--accent);text-decoration:none}
   <p style="font-size:.95rem;color:var(--muted);line-height:1.85;max-width:640px;margin-bottom:2rem">A personal AI coaching PWA that wakes up every morning already knowing what you did yesterday, how sore your muscles are, what Tampa weather looks like at 7 AM, and exactly what weights to put on the bar. No generic advice. No onboarding. Just a briefing from a coach who's been watching your last two weeks closely. Tap through the demo below.</p>
 
   <div class="phone-wrap" aria-label="Interactive Profe app demo">
-    <div class="phone" role="application" aria-label="Profe fitness app">
-      <div class="notch"></div>
-      <div class="p-status">
-        <span class="p-time">9:41</span>
-        <div class="p-icons"><span>●●●●</span><span>WiFi</span><span>▐▐▐</span></div>
-      </div>
-      <div class="p-screen">
+    <div class="profe-phone" role="application" aria-label="Profe fitness app">
+      <div class="profe-screen">
 
-        <!-- TODAY -->
-        <div id="pt-today" style="display:flex;flex-direction:column;flex:1;overflow:hidden">
-          <div class="p-header">
-            <div>
-              <div style="font-size:11px;color:#22c55e;font-weight:600;letter-spacing:.04em">MAY 21</div>
-              <div class="p-app-title">Thursday</div>
+        <!-- SHARED HEADER -->
+        <div class="profe-header">
+          <div class="profe-date">JUNE 3</div>
+          <div class="profe-day-row">
+            <span class="profe-day">Wednesday</span>
+            <div class="profe-session-pill">
+              <span class="pill-label">SESSION</span>
+              <span class="pill-value">GYM DAY</span>
             </div>
-            <span class="p-badge" id="p-session-badge">GYM DAY</span>
           </div>
-          <div class="p-scroll" id="p-today-scroll">
-            <div class="p-card" id="p-checkin">
-              <div class="p-card-title">Morning check-in</div>
-              <div style="display:flex;flex-direction:column;gap:7px">
+        </div>
+
+        <!-- SCROLLABLE CONTENT -->
+        <div class="profe-content">
+
+          <!-- ── TODAY ── -->
+          <div id="profe-panel-today" class="profe-panel active">
+
+            <!-- Quote card -->
+            <div class="profe-quote-card">
+              <div class="profe-quote-text">"First say to yourself what you would be, and then do what you have to do."</div>
+              <div class="profe-quote-attr">— EPICTETUS</div>
+            </div>
+
+            <!-- Weather card -->
+            <div class="profe-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px">
+                <div class="profe-section-lbl" style="margin-bottom:0">TAMPA</div>
+                <span style="font-size:10px;color:#6b7280">↑31° ↓21°C</span>
+              </div>
+              <div class="profe-weather-row">
+                <div class="profe-wslot">
+                  <span class="profe-wlbl">5 PM</span>
+                  <span class="profe-wemoji">☀️</span>
+                  <span class="profe-wtemp">33°</span>
+                  <span class="profe-wdet">🌧 4%</span>
+                  <span class="profe-wdet">💧 72%</span>
+                  <span class="profe-wdet">UV 7</span>
+                </div>
+                <div class="profe-wslot">
+                  <span class="profe-wlbl">8 PM</span>
+                  <span class="profe-wemoji">🌤</span>
+                  <span class="profe-wtemp">29°</span>
+                  <span class="profe-wdet">🌧 12%</span>
+                  <span class="profe-wdet">💧 68%</span>
+                  <span class="profe-wdet">UV 1</span>
+                </div>
+                <div class="profe-wslot">
+                  <span class="profe-wlbl">11 PM</span>
+                  <span class="profe-wemoji">🌙</span>
+                  <span class="profe-wtemp">26°</span>
+                  <span class="profe-wdet">🌧 8%</span>
+                  <span class="profe-wdet">💧 78%</span>
+                  <span class="profe-wdet">UV 0</span>
+                </div>
+                <div class="profe-wslot">
+                  <span class="profe-wlbl">8 AM</span>
+                  <span class="profe-wemoji">⛅</span>
+                  <span class="profe-wtemp">24°</span>
+                  <span class="profe-wdet">🌧 2%</span>
+                  <span class="profe-wdet">💧 65%</span>
+                  <span class="profe-wdet">UV 4</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nutrition card -->
+            <div class="profe-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                <div class="profe-section-lbl" style="margin-bottom:0">NUTRITION</div>
+                <span style="font-size:10px;color:#6b7280">› chevron</span>
+              </div>
+              <div style="font-size:20px;font-weight:700;color:#fff;margin-bottom:2px">2,850 <span style="font-size:12px;font-weight:400;color:#6b7280">kcal</span></div>
+              <div class="profe-macro-bar">
+                <div class="profe-macro-seg" style="width:25%;background:#22c55e"></div>
+                <div class="profe-macro-seg" style="width:48%;background:#3b82f6"></div>
+                <div class="profe-macro-seg" style="width:27%;background:#f59e0b"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:10px">
+                <span><span style="color:#22c55e">●</span> <span style="color:#9ca3af">PROTEIN</span> <span style="color:#fff;font-weight:600">165g</span></span>
+                <span><span style="color:#3b82f6">●</span> <span style="color:#9ca3af">CARBS</span> <span style="color:#fff;font-weight:600">320g</span></span>
+                <span><span style="color:#f59e0b">●</span> <span style="color:#9ca3af">FATS</span> <span style="color:#fff;font-weight:600">79g</span></span>
+              </div>
+            </div>
+
+            <!-- Chat input bar -->
+            <div class="profe-chat-input">
+              <span style="font-size:11px">Tell Profe how you feel, swap workout…</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </div>
+
+          </div><!-- /today -->
+
+          <!-- ── GYM ── -->
+          <div id="profe-panel-gym" class="profe-panel">
+
+            <!-- Muscle readiness -->
+            <div class="profe-card">
+              <div class="profe-section-lbl">MUSCLE READINESS</div>
+              <div class="profe-chip-row">
+                <span class="profe-chip rdy">● Quads</span>
+                <span class="profe-chip rdy">● Hams</span>
+                <span class="profe-chip rdy">● Glutes</span>
+                <span class="profe-chip rdy">● Chest</span>
+                <span class="profe-chip rdy">● Back</span>
+                <span class="profe-chip rdy">● Delts</span>
+                <span class="profe-chip rdy">● Tris</span>
+                <span class="profe-chip rdy">● Bis</span>
+              </div>
+            </div>
+
+            <!-- Gym day type -->
+            <div class="profe-card">
+              <div class="profe-section-lbl">GYM DAY</div>
+              <div class="profe-day-type-row">
+                <div class="profe-type-pill">
+                  <div class="profe-type-pill-label">TYPE</div>
+                  <div class="profe-type-pill-val">PULL</div>
+                </div>
+                <div class="profe-type-pill">
+                  <div class="profe-type-pill-label">FOCUS</div>
+                  <div class="profe-type-pill-val" style="color:#3b82f6">STRENGTH</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Warmup exercise list -->
+            <div class="profe-card">
+              <div class="profe-section-lbl">WARMUP</div>
+              <div class="profe-ex-row" style="border-left:3px solid #22c55e;padding-left:8px;margin-left:-12px">
                 <div>
-                  <div style="font-size:10px;color:#444;margin-bottom:4px">Energy</div>
-                  <div class="p-ci-row" data-metric="energy"><button class="p-ci-btn" data-val="low">Low</button><button class="p-ci-btn" data-val="med">Med</button><button class="p-ci-btn" data-val="high">High</button></div>
+                  <div class="profe-ex-name">1. Leg swings</div>
+                  <div class="profe-ex-det">10 front/back per side</div>
+                </div>
+                <span class="profe-badge profe-badge-g" style="flex-shrink:0">Done</span>
+              </div>
+              <div class="profe-ex-row">
+                <div>
+                  <div class="profe-ex-name">2. World's greatest stretch</div>
+                  <div class="profe-ex-det">5 per side</div>
+                </div>
+              </div>
+              <div class="profe-ex-row">
+                <div>
+                  <div class="profe-ex-name">3. Arm circles</div>
+                  <div class="profe-ex-det">10 forward + 10 backward</div>
+                </div>
+              </div>
+              <div class="profe-ex-row">
+                <div>
+                  <div class="profe-ex-name">4. Inchworm to push-up</div>
+                  <div class="profe-ex-det">5 reps</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /gym -->
+
+          <!-- ── BODY ── -->
+          <div id="profe-panel-body" class="profe-panel">
+
+            <!-- Activity calendar collapsed row -->
+            <div class="profe-card" style="cursor:pointer">
+              <div class="profe-cal-row">
+                <span style="font-size:12px;font-weight:600;color:#f0f0f0">📅 ACTIVITY CALENDAR</span>
+                <span style="color:#6b7280;font-size:14px">›</span>
+              </div>
+            </div>
+
+            <!-- Two stat cards -->
+            <div class="profe-stats-pair">
+              <div class="profe-stat-box">
+                <div class="profe-section-lbl" style="margin-bottom:4px">CURRENT WEIGHT</div>
+                <div class="profe-stat-val">73.2</div>
+                <div class="profe-stat-sub">kg</div>
+              </div>
+              <div class="profe-stat-box">
+                <div class="profe-section-lbl" style="margin-bottom:4px">BODY FAT</div>
+                <div class="profe-stat-val">13.9%</div>
+                <div class="profe-stat-sub">estimated</div>
+              </div>
+            </div>
+
+            <!-- Monthly report -->
+            <div class="profe-card">
+              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+                <span style="font-size:11px;font-weight:700;color:#22c55e">📊 MONTHLY REPORT</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;font-size:9px;color:#6b7280;font-weight:600;letter-spacing:.05em">
+                <span>MAY 2026</span>
+                <span>JUNE 2026</span>
+              </div>
+              <div class="profe-body-row">
+                <span class="profe-body-lbl">AVG WEIGHT</span>
+                <span class="profe-body-val">73.2 kg → —</span>
+              </div>
+              <div class="profe-body-row">
+                <span class="profe-body-lbl">GYM SESSIONS</span>
+                <span class="profe-body-val">0 → 0 → 0</span>
+              </div>
+              <div class="profe-body-row">
+                <span class="profe-body-lbl">CARDIO SESSIONS</span>
+                <span class="profe-body-val" style="color:#ef4444">4 ↓3 → 1</span>
+              </div>
+              <button class="profe-ask-btn">ASK PROFE</button>
+            </div>
+
+            <!-- Log weigh-in -->
+            <div class="profe-card">
+              <div style="margin-bottom:8px">
+                <span style="font-size:11px;font-weight:700;color:#22c55e">📋 LOG WEIGH-IN</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                <div>
+                  <label class="profe-log-label">WEIGHT (KG)</label>
+                  <input class="profe-log-input" type="number" value="75.0" step="0.1" min="40" max="200" aria-label="Weight in kg">
                 </div>
                 <div>
-                  <div style="font-size:10px;color:#444;margin-bottom:4px">Soreness</div>
-                  <div class="p-ci-row" data-metric="soreness"><button class="p-ci-btn" data-val="low">Low</button><button class="p-ci-btn" data-val="med">Med</button><button class="p-ci-btn" data-val="high">High</button></div>
-                </div>
-                <div>
-                  <div style="font-size:10px;color:#444;margin-bottom:4px">Sleep</div>
-                  <div class="p-ci-row" data-metric="sleep"><button class="p-ci-btn" data-val="low">Low</button><button class="p-ci-btn" data-val="med">Med</button><button class="p-ci-btn" data-val="high">High</button></div>
-                </div>
-                <button class="p-submit" id="p-checkin-submit">Load today's brief</button>
-              </div>
-            </div>
-            <div id="p-after-checkin" style="display:none">
-              <div class="p-card">
-                <div class="p-card-title">Weather — Tampa</div>
-                <div class="p-weather">
-                  <div class="p-wslot"><span class="p-wlbl">7 AM</span><span class="p-wtemp">76°F</span><span class="p-wdet">62% hum</span><span class="p-pill p-pill-g" style="font-size:9px;padding:1px 5px;margin-top:2px">Best</span></div>
-                  <div class="p-wslot"><span class="p-wlbl">12 PM</span><span class="p-wtemp">88°F</span><span class="p-wdet">75% hum</span><span class="p-pill p-pill-a" style="font-size:9px;padding:1px 5px;margin-top:2px">Warn</span></div>
-                  <div class="p-wslot"><span class="p-wlbl">3 PM</span><span class="p-wtemp">91°F</span><span class="p-wdet">80% hum</span><span class="p-pill p-pill-r" style="font-size:9px;padding:1px 5px;margin-top:2px">Bad</span></div>
-                  <div class="p-wslot"><span class="p-wlbl">6 PM</span><span class="p-wtemp">84°F</span><span class="p-wdet">70% hum</span><span class="p-pill p-pill-a" style="font-size:9px;padding:1px 5px;margin-top:2px">Warn</span></div>
-                </div>
-                <div style="margin-top:8px;font-size:10px;color:#555;line-height:1.5">Best window: <b style="color:#22c55e">7 AM</b> — heat builds fast after noon.</div>
-              </div>
-              <div class="p-card">
-                <div class="p-card-title">Today's brief</div>
-                <p class="p-text">Today is <b>Pull</b> — back and biceps. Your lats logged clean RPE 7s last week across all working rows. <b>Target: Cable Row 4×8 @ 150 lb</b>. Bump 5 lb from last session's 145 which you hit clean. Energy High, soreness Med — solid state.</p>
-                <p class="p-text" style="margin-top:6px;font-style:italic;color:#444">"A bad session isn't a bad week. Zoom out." — Ted Lasso</p>
-              </div>
-              <div class="p-card">
-                <div class="p-card-title">Ask Profe</div>
-                <div id="p-chat-thread" style="display:flex;flex-direction:column">
-                  <div style="display:flex;justify-content:flex-start;margin-bottom:6px"><div class="p-chat-bubble p-chat-bot">Ask me anything about today's plan.</div></div>
-                </div>
-                <div style="display:flex;gap:6px;margin-top:6px">
-                  <input class="p-chat-input" id="p-chat-inp" placeholder="Swap to rest day…">
-                  <button class="p-send" id="p-chat-send" aria-label="Send">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                  </button>
+                  <label class="profe-log-label">BODY FAT (%)</label>
+                  <input class="profe-log-input" type="number" value="18.5" step="0.1" min="3" max="60" aria-label="Body fat percentage">
                 </div>
               </div>
+              <label class="profe-log-label">NOTE</label>
+              <input class="profe-log-input" type="text" placeholder="e.g. Post-vacation, feeling lean…" aria-label="Note">
+              <button class="profe-log-btn">SAVE WEIGH-IN</button>
             </div>
-          </div>
-        </div>
 
-        <!-- GYM -->
-        <div id="pt-gym" style="display:none;flex-direction:column;flex:1;overflow:hidden">
-          <div class="p-header"><div class="p-app-title">Gym</div><span class="p-badge">PULL</span></div>
-          <div class="p-scroll">
-            <div class="p-section-lbl">Strength — 1RM trend</div>
-            <div class="p-card">
-              <div style="margin-bottom:10px">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;color:#f0f0f0">Squat</span><span style="font-size:10px;color:#555">225 lb <span class="p-pill p-pill-g" style="font-size:9px;padding:1px 5px">MOMENTUM</span></span></div>
-                <div class="p-prog-track"><div class="p-prog-fill" style="width:78%;background:#22c55e"></div></div>
-              </div>
-              <div style="margin-bottom:10px">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;color:#f0f0f0">Bench</span><span style="font-size:10px;color:#555">185 lb <span class="p-pill p-pill-b" style="font-size:9px;padding:1px 5px">STABLE</span></span></div>
-                <div class="p-prog-track"><div class="p-prog-fill" style="width:62%;background:#3b82f6"></div></div>
-              </div>
-              <div style="margin-bottom:10px">
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;color:#f0f0f0">OHP</span><span style="font-size:10px;color:#555">115 lb <span class="p-pill p-pill-a" style="font-size:9px;padding:1px 5px">PLATEAU</span></span></div>
-                <div class="p-prog-track"><div class="p-prog-fill" style="width:50%;background:#f59e0b"></div></div>
-              </div>
-              <div>
-                <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:11px;color:#f0f0f0">RDL</span><span style="font-size:10px;color:#555">195 lb <span class="p-pill p-pill-g" style="font-size:9px;padding:1px 5px">MOMENTUM</span></span></div>
-                <div class="p-prog-track"><div class="p-prog-fill" style="width:70%;background:#22c55e"></div></div>
+            <!-- Recent entries -->
+            <div class="profe-card">
+              <div class="profe-section-lbl">RECENT ENTRIES</div>
+              <div class="profe-entry-row">
+                <span class="profe-entry-date">Thu, May 21</span>
+                <span class="profe-entry-val">73.2 kg</span>
+                <span class="profe-entry-val">13.9%</span>
               </div>
             </div>
-            <div class="p-section-lbl">Last session — Mon Legs</div>
-            <div class="p-card">
-              <div class="p-row"><span class="p-rname">Squat</span><span class="p-rdet">4×5 @ 180 lb · RPE 7</span></div>
-              <div class="p-row"><span class="p-rname">RDL</span><span class="p-rdet">3×8 @ 155 lb · RPE 7</span></div>
-              <div class="p-row"><span class="p-rname">Leg Press</span><span class="p-rdet">3×10 @ 270 lb · RPE 6</span></div>
-              <div class="p-row"><span class="p-rname">Leg Curl</span><span class="p-rdet">3×12 @ 90 lb · RPE 7</span></div>
-            </div>
-            <button class="p-submit" style="margin:10px 10px 0;width:calc(100% - 20px)">Start today's session</button>
-          </div>
-        </div>
 
-        <!-- BODY -->
-        <div id="pt-body" style="display:none;flex-direction:column;flex:1;overflow:hidden">
-          <div class="p-header"><div class="p-app-title">Body</div></div>
-          <div class="p-scroll">
-            <div class="p-card" style="margin-top:10px">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
-                <div style="background:#222;border-radius:9px;padding:10px;text-align:center"><div class="p-stat-val">73.5</div><div class="p-stat-lbl">Weight (kg)</div></div>
-                <div style="background:#222;border-radius:9px;padding:10px;text-align:center"><div class="p-stat-val">14.2%</div><div class="p-stat-lbl">Body fat</div></div>
+          </div><!-- /body -->
+
+          <!-- ── CARDIO ── -->
+          <div id="profe-panel-cardio" class="profe-panel">
+
+            <div class="profe-section-lbl">RECENT</div>
+
+            <!-- Swim -->
+            <div class="profe-act-card">
+              <div style="display:flex;align-items:flex-start;gap:8px">
+                <span style="font-size:18px;line-height:1.2">🏊</span>
+                <div style="flex:1;min-width:0">
+                  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+                    <span style="font-size:12px;font-weight:600;color:#f0f0f0">Swim</span>
+                    <span class="profe-badge profe-badge-g">EASY</span>
+                  </div>
+                  <div style="font-size:10px;color:#6b7280;margin-top:2px">Yesterday · 30m · 1,000m</div>
+                  <div style="font-size:10px;color:#6b7280;font-style:italic;margin-top:2px">"Felt strong, easy morning swim"</div>
+                </div>
+                <div style="text-align:right;flex-shrink:0">
+                  <div style="font-size:11px;font-weight:600;color:#22c55e">231 kcal</div>
+                </div>
               </div>
-              <div style="font-size:10px;color:#444;margin-bottom:8px">6-week trend</div>
-              <svg width="100%" height="60" viewBox="0 0 280 60" aria-label="Bodyweight trend going down from 75.9 to 73.5 kg">
-                <polyline fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="10,52 56,46 102,40 148,35 194,31 240,27 270,24"/>
-                <circle cx="10" cy="52" r="3" fill="#22c55e"/><circle cx="270" cy="24" r="4" fill="#22c55e" stroke="#000" stroke-width="2"/>
-                <text x="8" y="58" fill="#444" font-size="8" font-family="system-ui">75.9</text>
-                <text x="248" y="22" fill="#22c55e" font-size="8" font-family="system-ui" font-weight="600">73.5</text>
-              </svg>
             </div>
-            <div class="p-card">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-                <span class="p-card-title" style="margin-bottom:0">Monthly report</span>
-                <div style="display:flex;gap:8px;font-size:10px;color:#444"><span>Apr 2026</span><span style="color:#22c55e">→</span><span>May 2026</span></div>
+
+            <!-- Bike 1 -->
+            <div class="profe-act-card">
+              <div style="display:flex;align-items:flex-start;gap:8px">
+                <span style="font-size:18px;line-height:1.2">🚴</span>
+                <div style="flex:1;min-width:0">
+                  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+                    <span style="font-size:12px;font-weight:600;color:#f0f0f0">Bike</span>
+                    <span class="profe-strava-tag">STRAVA</span>
+                  </div>
+                  <div style="font-size:10px;color:#6b7280;margin-top:2px">Sat, May 30 · 58m 40s · 17.9 km</div>
+                  <div style="font-size:10px;color:#22c55e;margin-top:1px">3:17 min/km</div>
+                  <div style="font-size:10px;color:#6b7280;font-style:italic;margin-top:1px">"Evening Ride"</div>
+                </div>
+                <div style="text-align:right;flex-shrink:0">
+                  <div style="font-size:11px;font-weight:600;color:#22c55e">587 kcal</div>
+                </div>
               </div>
-              <div class="p-row"><span class="p-rname">Avg weight</span><span class="p-rdet" style="color:#22c55e">73.9 → —</span></div>
-              <div class="p-row"><span class="p-rname">Gym sessions</span><span class="p-rdet">0 → 0</span></div>
-              <div class="p-row"><span class="p-rname">Cardio sessions</span><span class="p-rdet" style="color:#ef4444">6 → 3</span></div>
-              <button class="p-submit" style="margin-top:10px;background:#0d9488;font-size:11px;padding:8px">Ask Profe</button>
             </div>
-          </div>
-        </div>
 
-        <!-- CARDIO -->
-        <div id="pt-cardio" style="display:none;flex-direction:column;flex:1;overflow:hidden">
-          <div class="p-header"><div class="p-app-title">Cardio</div><button style="background:rgba(252,82,0,.15);border:1px solid rgba(252,82,0,.3);color:#fc5200;border-radius:999px;padding:3px 10px;font-size:10px;font-weight:700;cursor:pointer">↻ Strava</button></div>
-          <div class="p-scroll">
-            <div class="p-section-lbl">Personal records</div>
-            <div class="p-card" style="padding:8px 12px">
-              <div class="p-row"><span class="p-rname">Fastest pace (run)</span><span class="p-rdet" style="color:#22c55e;font-weight:700">4:48 /km</span></div>
-              <div class="p-row"><span class="p-rname">Longest run</span><span class="p-rdet" style="color:#22c55e;font-weight:700">21.1 km</span></div>
-              <div class="p-row"><span class="p-rname">Longest duration</span><span class="p-rdet" style="color:#22c55e;font-weight:700">2h 04m</span></div>
+            <!-- Bike 2 -->
+            <div class="profe-act-card">
+              <div style="display:flex;align-items:flex-start;gap:8px">
+                <span style="font-size:18px;line-height:1.2">🚴</span>
+                <div style="flex:1;min-width:0">
+                  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+                    <span style="font-size:12px;font-weight:600;color:#f0f0f0">Bike</span>
+                    <span class="profe-strava-tag">STRAVA</span>
+                  </div>
+                  <div style="font-size:10px;color:#6b7280;margin-top:2px">Wed, May 20 · 33m 44s · 9.4 km</div>
+                  <div style="font-size:10px;color:#22c55e;margin-top:1px">3:36 min/km</div>
+                  <div style="font-size:10px;color:#6b7280;font-style:italic;margin-top:1px">"Lunch Ride"</div>
+                </div>
+                <div style="text-align:right;flex-shrink:0">
+                  <div style="font-size:11px;font-weight:600;color:#22c55e">337 kcal</div>
+                </div>
+              </div>
             </div>
-            <div class="p-section-lbl">Recent activity</div>
-            <div class="p-act-card">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;font-weight:600;color:#f0f0f0">Long Run</span><div style="display:flex;gap:5px;align-items:center"><span style="background:rgba(252,82,0,.15);color:#fc5200;border:1px solid rgba(252,82,0,.3);padding:1px 6px;border-radius:999px;font-size:9px;font-weight:700">STRAVA</span><span style="font-size:10px;color:#444">May 18</span></div></div>
-              <div style="display:flex;gap:10px"><span style="font-size:11px;color:#f0f0f0;font-weight:600">16.2 km</span><span style="font-size:11px;color:#f0f0f0;font-weight:600">1h 28m</span><span style="font-size:11px;color:#f0f0f0;font-weight:600">5:26 /km</span></div>
-              <div style="margin-top:5px;display:flex;gap:6px;align-items:center"><span class="p-pill p-pill-a" style="font-size:9px;padding:1px 6px">Moderate</span><span style="font-size:10px;color:#555">688 kcal</span></div>
-            </div>
-            <div class="p-act-card" style="margin-top:6px">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;font-weight:600;color:#f0f0f0">Tempo Run</span><div style="display:flex;gap:5px;align-items:center"><span class="p-pill p-pill-g" style="font-size:9px;padding:1px 5px">🏅 PR</span><span style="background:rgba(252,82,0,.15);color:#fc5200;border:1px solid rgba(252,82,0,.3);padding:1px 6px;border-radius:999px;font-size:9px;font-weight:700">STRAVA</span><span style="font-size:10px;color:#444">May 10</span></div></div>
-              <div style="display:flex;gap:10px"><span style="font-size:11px;color:#f0f0f0;font-weight:600">8.0 km</span><span style="font-size:11px;color:#f0f0f0;font-weight:600">38m 24s</span><span style="font-size:11px;color:#f0f0f0;font-weight:600">4:48 /km</span></div>
-              <div style="margin-top:5px;display:flex;gap:6px;align-items:center"><span class="p-pill p-pill-r" style="font-size:9px;padding:1px 6px">Hard</span><span style="font-size:10px;color:#555">524 kcal</span></div>
-            </div>
-          </div>
-        </div>
 
-        <!-- WEEK -->
-        <div id="pt-week" style="display:none;flex-direction:column;flex:1;overflow:hidden">
-          <div class="p-header"><div class="p-app-title">Week</div><span class="p-badge">GYM DAY</span></div>
-          <div class="p-scroll">
-            <div class="p-card" style="margin-top:10px">
-              <div class="p-card-title">Profe's week overview</div>
-              <div class="p-week-row done"><span class="p-wday-lbl">Mon</span><span class="p-wday-name">Legs</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Done</span></div>
-              <div class="p-week-row done"><span class="p-wday-lbl">Tue</span><span class="p-wday-name">Push</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Done</span></div>
-              <div class="p-week-row done"><span class="p-wday-lbl">Wed</span><span class="p-wday-name">Easy Run 5K</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Done</span></div>
-              <div class="p-week-row today"><span class="p-wday-lbl">Thu</span><span class="p-wday-name">Pull</span><span class="p-pill p-pill-g" style="font-size:9px;padding:1px 6px">Today</span></div>
-              <div class="p-week-row"><span class="p-wday-lbl">Fri</span><span class="p-wday-name">Yoga</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Planned</span></div>
-              <div class="p-week-row"><span class="p-wday-lbl">Sat</span><span class="p-wday-name">Long Run 16K</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Planned</span></div>
-              <div class="p-week-row"><span class="p-wday-lbl">Sun</span><span class="p-wday-name">Rest</span><span class="p-pill p-pill-gray" style="font-size:9px;padding:1px 6px">Planned</span></div>
+            <!-- Walk -->
+            <div class="profe-act-card">
+              <div style="display:flex;align-items:flex-start;gap:8px">
+                <span style="font-size:18px;line-height:1.2">🚶</span>
+                <div style="flex:1;min-width:0">
+                  <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+                    <span style="font-size:12px;font-weight:600;color:#f0f0f0">Walk</span>
+                    <span class="profe-strava-tag">STRAVA</span>
+                  </div>
+                  <div style="font-size:10px;color:#6b7280;margin-top:2px">Thu, May 14 · 59m 11s · 3.4 km</div>
+                  <div style="font-size:10px;color:#6b7280;font-style:italic;margin-top:2px">"Evening Walk"</div>
+                </div>
+                <div style="text-align:right;flex-shrink:0">
+                  <div style="font-size:11px;font-weight:600;color:#22c55e">296 kcal</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- BOTTOM NAV -->
-        <nav class="p-nav" aria-label="App tabs">
-          <div class="p-tab active" data-tab="today" role="tab" aria-selected="true" tabindex="0">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>Today</span>
+          </div><!-- /cardio -->
+
+          <!-- ── WEEK ── -->
+          <div id="profe-panel-week" class="profe-panel">
+
+            <div style="font-size:22px;font-weight:800;color:#fff;padding:2px 0 0">This Week</div>
+
+            <!-- Overview row -->
+            <div class="profe-card" style="cursor:pointer">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span style="font-size:11px;font-weight:600;color:#f0f0f0">📋 PROFE'S WEEK OVERVIEW</span>
+                <span style="color:#6b7280">▾</span>
+              </div>
+            </div>
+
+            <!-- Day rows -->
+            <div class="profe-card" style="padding:8px 12px;display:flex;flex-direction:column;gap:0">
+
+              <div style="display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:.5px solid #2a2a2a">
+                <span style="background:#2a2a2a;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:600;color:#9ca3af;white-space:nowrap;flex-shrink:0">🥱 Gym</span>
+                <div style="flex:1;overflow:hidden">
+                  <div style="font-size:11px;font-weight:600;color:#f0f0f0">Monday</div>
+                  <div style="font-size:10px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Start with barbell back squ...</div>
+                </div>
+                <button style="background:#2a2a2a;border:1px solid #333;color:#6b7280;border-radius:999px;padding:2px 7px;font-size:9px;cursor:pointer;white-space:nowrap;flex-shrink:0">Swap ⇅</button>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:.5px solid #2a2a2a">
+                <span style="background:#0d9488;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:600;color:#fff;white-space:nowrap;flex-shrink:0">🏊 Swim</span>
+                <div style="flex:1;overflow:hidden">
+                  <div style="font-size:11px;font-weight:600;color:#f0f0f0">Tuesday</div>
+                  <div style="font-size:10px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Easy recovery swim focus...</div>
+                </div>
+                <button style="background:#2a2a2a;border:1px solid #333;color:#6b7280;border-radius:999px;padding:2px 7px;font-size:9px;cursor:pointer;white-space:nowrap;flex-shrink:0">Swap ⇅</button>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:.5px solid #2a2a2a">
+                <span style="background:#2a2a2a;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:600;color:#9ca3af;white-space:nowrap;flex-shrink:0">😴 Gym</span>
+                <div style="flex:1;overflow:hidden">
+                  <div style="font-size:11px;font-weight:600;color:#22c55e">Wednesday <span style="font-weight:400;color:#6b7280">— Today</span></div>
+                  <div style="font-size:10px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Upper body focused sessio...</div>
+                </div>
+                <button style="background:#2a2a2a;border:1px solid #333;color:#6b7280;border-radius:999px;padding:2px 7px;font-size:9px;cursor:pointer;white-space:nowrap;flex-shrink:0">Swap ⇅</button>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:.5px solid #2a2a2a">
+                <span style="background:#0d9488;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:600;color:#fff;white-space:nowrap;flex-shrink:0">🏃 Run</span>
+                <div style="flex:1;overflow:hidden">
+                  <div style="font-size:11px;font-weight:600;color:#f0f0f0">Thursday</div>
+                  <div style="font-size:10px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Easy-paced 30-40 minute r...</div>
+                </div>
+                <button style="background:#2a2a2a;border:1px solid #333;color:#6b7280;border-radius:999px;padding:2px 7px;font-size:9px;cursor:pointer;white-space:nowrap;flex-shrink:0">Swap ⇅</button>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:6px;padding:6px 0">
+                <span style="background:#2a2a2a;border-radius:999px;padding:2px 8px;font-size:10px;font-weight:600;color:#9ca3af;white-space:nowrap;flex-shrink:0">🥱 Gym</span>
+                <div style="flex:1;overflow:hidden">
+                  <div style="font-size:11px;font-weight:600;color:#f0f0f0">Friday</div>
+                  <div style="font-size:10px;color:#6b7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Full body session focusing...</div>
+                </div>
+                <button style="background:#2a2a2a;border:1px solid #333;color:#6b7280;border-radius:999px;padding:2px 7px;font-size:9px;cursor:pointer;white-space:nowrap;flex-shrink:0">Swap ⇅</button>
+              </div>
+
+            </div>
+
+          </div><!-- /week -->
+
+        </div><!-- /profe-content -->
+
+        <!-- TAB BAR -->
+        <nav class="profe-tabbar" aria-label="App tabs">
+          <div class="profe-tab active" data-panel="today" tabindex="0" role="tab" aria-selected="true">
+            <span class="profe-tab-icon">📅</span>
+            <span class="profe-tab-lbl">TODAY</span>
           </div>
-          <div class="p-tab" data-tab="gym" role="tab" aria-selected="false" tabindex="0">
-            <svg viewBox="0 0 24 24"><path d="M6.5 6.5h11M6.5 17.5h11M3 12h18M3 12l3-3m-3 3l3 3m15-3l-3-3m3 3l-3 3"/></svg>
-            <span>Gym</span>
+          <div class="profe-tab" data-panel="gym" tabindex="0" role="tab" aria-selected="false">
+            <span class="profe-tab-icon">🏋️</span>
+            <span class="profe-tab-lbl">GYM</span>
           </div>
-          <div class="p-tab" data-tab="body" role="tab" aria-selected="false" tabindex="0">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M12 10c-4 0-7 2-7 5v2h14v-2c0-3-3-5-7-5z"/></svg>
-            <span>Body</span>
+          <div class="profe-tab" data-panel="body" tabindex="0" role="tab" aria-selected="false">
+            <span class="profe-tab-icon">⚖️</span>
+            <span class="profe-tab-lbl">BODY</span>
           </div>
-          <div class="p-tab" data-tab="cardio" role="tab" aria-selected="false" tabindex="0">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            <span>Cardio</span>
+          <div class="profe-tab" data-panel="cardio" tabindex="0" role="tab" aria-selected="false">
+            <span class="profe-tab-icon">🏃</span>
+            <span class="profe-tab-lbl">CARDIO</span>
           </div>
-          <div class="p-tab" data-tab="week" role="tab" aria-selected="false" tabindex="0">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="7" y1="14" x2="17" y2="14"/><line x1="7" y1="18" x2="13" y2="18"/></svg>
-            <span>Week</span>
+          <div class="profe-tab" data-panel="week" tabindex="0" role="tab" aria-selected="false">
+            <span class="profe-tab-icon">📆</span>
+            <span class="profe-tab-lbl">WEEK</span>
           </div>
         </nav>
-      </div>
-    </div>
-  </div>
+
+      </div><!-- /profe-screen -->
+    </div><!-- /profe-phone -->
+  </div><!-- /phone-wrap -->
 </div>
 
 <!-- ═══════════════════════════════ AI SCOUT ══════════════════════════ -->
@@ -945,67 +1178,17 @@ document.querySelectorAll('.ba-wrap').forEach(wrap => {
 });
 
 /* ── PROFE TABS ── */
-const pTabs = ['today','gym','body','cardio','week'];
-document.querySelectorAll('.p-tab').forEach(tab => {
-  tab.addEventListener('click', () => switchPTab(tab.dataset.tab));
-  tab.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') switchPTab(tab.dataset.tab); });
+document.querySelectorAll('.profe-tab').forEach(tab => {
+  tab.addEventListener('click', () => switchProfeTab(tab.dataset.panel));
+  tab.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') switchProfeTab(tab.dataset.panel); });
 });
-function switchPTab(name) {
-  pTabs.forEach(t => {
-    const el = document.getElementById('pt-' + t);
-    if (el) el.style.display = t === name ? 'flex' : 'none';
-  });
-  document.querySelectorAll('.p-tab').forEach(t => {
-    const active = t.dataset.tab === name;
+function switchProfeTab(name) {
+  document.querySelectorAll('.profe-panel').forEach(p => p.classList.toggle('active', p.id === 'profe-panel-' + name));
+  document.querySelectorAll('.profe-tab').forEach(t => {
+    const active = t.dataset.panel === name;
     t.classList.toggle('active', active);
     t.setAttribute('aria-selected', active);
   });
-}
-
-/* ── PROFE CHECK-IN ── */
-document.querySelectorAll('.p-ci-row').forEach(row => {
-  row.querySelectorAll('.p-ci-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      row.querySelectorAll('.p-ci-btn').forEach(b => b.className = 'p-ci-btn');
-      btn.classList.add(btn.dataset.val === 'low' ? 'sel-l' : btn.dataset.val === 'med' ? 'sel-m' : 'sel-h');
-    });
-  });
-});
-document.getElementById('p-checkin-submit').addEventListener('click', () => {
-  document.getElementById('p-checkin').style.display = 'none';
-  document.getElementById('p-after-checkin').style.display = 'block';
-});
-
-/* ── PROFE CHAT ── */
-const chatReplies = {
-  default: "Got it — I'll adjust the plan.",
-  rest: "Rest day locked in. Recovery is part of the plan.",
-  pull: "Swapped to Pull. Cable Row 4×8 @ 150 lb is your target.",
-  push: "Switched to Push. Bench target: 155 lb × 4×5.",
-};
-document.getElementById('p-chat-send').addEventListener('click', sendChat);
-document.getElementById('p-chat-inp').addEventListener('keydown', e => { if (e.key === 'Enter') sendChat(); });
-function sendChat() {
-  const inp = document.getElementById('p-chat-inp');
-  const val = inp.value.trim();
-  if (!val) return;
-  const thread = document.getElementById('p-chat-thread');
-  const uDiv = document.createElement('div');
-  uDiv.style.cssText = 'display:flex;justify-content:flex-end;margin-bottom:6px';
-  uDiv.innerHTML = '<div class="p-chat-bubble p-chat-user">' + val + '</div>';
-  thread.appendChild(uDiv);
-  inp.value = '';
-  const lower = val.toLowerCase();
-  let reply = chatReplies.default;
-  if (lower.includes('rest')) reply = chatReplies.rest;
-  else if (lower.includes('pull')) reply = chatReplies.pull;
-  else if (lower.includes('push')) reply = chatReplies.push;
-  setTimeout(() => {
-    const bDiv = document.createElement('div');
-    bDiv.style.cssText = 'display:flex;justify-content:flex-start;margin-bottom:6px';
-    bDiv.innerHTML = '<div class="p-chat-bubble p-chat-bot">' + reply + '</div>';
-    thread.appendChild(bDiv);
-  }, 500);
 }
 
 /* ── HAMBURGER NAV ── */
