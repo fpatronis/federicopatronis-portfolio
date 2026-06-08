@@ -41,16 +41,19 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.9);backdrop-fil
 .section{padding:5rem 2rem;max-width:1160px;margin:0 auto}
 .section+.section{padding-top:0}
 
-/* ── HERO BENTO ── */
-.hero-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;padding-top:3rem}
-.bento{background:var(--s1);border:1px solid var(--border);border-radius:20px;padding:2rem;overflow:hidden;position:relative;transition:border-color .3s}
-.bento:hover{border-color:rgba(16,185,129,0.25)}
-.cell-intro{grid-column:1/9;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
-.cell-linkedin{grid-column:9/13;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
-.cell-linkedin:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:20px}
-.hero-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;font-weight:500}
-.hero-name{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.1;margin-bottom:.6rem}
-.hero-role{font-size:.9rem;color:var(--muted);font-weight:300}
+/* ── VIDEO HERO ── */
+#hero{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5);z-index:1}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:780px;padding:0 2rem}
+.hero-label{font-family:var(--sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:1.25rem}
+.hero-headline{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;color:#fff;margin:0 0 1.5rem}
+.hero-sub{font-family:var(--sans);font-size:clamp(.95rem,1.5vw,1.1rem);color:rgba(255,255,255,0.75);line-height:1.65;max-width:620px;margin:0 auto 2.5rem}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{padding:.75rem 2rem;background:#E8DFC8;color:#0a0a0a;border-radius:6px;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;transition:opacity .2s}
+.btn-primary:hover{opacity:.85}
+.btn-outline{padding:.75rem 2rem;border:1.5px solid rgba(255,255,255,0.6);color:#fff;border-radius:6px;font-family:var(--sans);font-weight:500;font-size:.95rem;text-decoration:none;transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.07)}
 .tagline-quote{font-family:var(--serif);font-style:italic;font-size:1.2rem;line-height:1.5;flex:1;display:flex;align-items:center}
 .tagline-quote::before{content:'"';color:var(--accent);font-size:2.5rem;line-height:0;vertical-align:-.4em;margin-right:.3rem}
 .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:.5rem;animation:pulse 2s infinite}
@@ -60,14 +63,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,10,10,0.9);backdrop-fil
 .loc-text strong{display:block;font-size:.9rem;font-weight:500}
 .loc-text span{font-size:.75rem;color:var(--muted)}
 .skill-tag{background:var(--s2);border:1px solid var(--border);border-radius:999px;padding:.3rem .75rem;font-size:.75rem;color:var(--muted)}
-.li-icon{width:52px;height:52px;background:rgba(10,102,194,.15);border:1px solid rgba(10,102,194,.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;transition:transform .2s}
-.cell-linkedin:hover .li-icon{transform:scale(1.06)}
-.li-label{font-size:.8rem;color:var(--muted);text-align:center}
-.li-url{font-size:.7rem;color:rgba(10,102,194,.8);text-align:center;margin-top:.2rem}
-.li-location{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.5rem}
-.li-flags{display:flex;gap:.75rem;justify-content:center;margin-top:.75rem;font-size:1.5rem}
-.li-flag{width:28px;height:21px;border-radius:3px;object-fit:cover;opacity:0.9;transition:opacity 0.2s}
-.li-flag:hover{opacity:1}
 
 /* ── SECTION HEADER ── */
 .sec-eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.5rem}
@@ -290,9 +285,6 @@ footer a{color:var(--accent);text-decoration:none}
 
 /* ── TABLET: 768px–960px ── */
 @media(max-width:960px){
-  .hero-grid{grid-template-columns:1fr 1fr}
-  .cell-intro{grid-column:1/3}
-  .cell-linkedin{grid-column:1/3}
   .projects-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
   .cf .form-row{grid-template-columns:1fr}
@@ -313,10 +305,9 @@ footer a{color:var(--accent);text-decoration:none}
   .section{padding:2.5rem 1.1rem}
   .proj-detail{padding-top:3rem;margin-top:3rem}
 
-  .hero-grid{grid-template-columns:1fr;gap:.75rem;padding-top:1.5rem}
-  .cell-intro,.cell-linkedin{grid-column:1/-1}
-  .cell-intro{min-height:auto;padding:1.5rem}
-  .hero-name{font-size:2.4rem}
+  .hero-headline{font-size:2rem}
+  .hero-ctas{flex-direction:column;align-items:center}
+  .btn-primary,.btn-outline{width:100%;max-width:280px;text-align:center}
 
   .projects-grid{grid-template-columns:1fr}
 
@@ -345,7 +336,6 @@ footer a{color:var(--accent);text-decoration:none}
 @media(max-width:375px){
   .phone{height:620px}
   .profe-phone{width:min(260px,calc(100vw - 1.5rem))}
-  .hero-name{font-size:2rem}
   .g3{grid-template-columns:1fr}
   .g3 img{height:180px}
 }
@@ -394,28 +384,19 @@ footer a{color:var(--accent);text-decoration:none}
 <main id="main-content">
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
-<section id="hero" class="section" aria-labelledby="hero-name">
-  <div class="hero-grid">
-    <div class="bento cell-intro">
-      <p class="hero-eyebrow" aria-hidden="true">Operations &amp; Business Strategy</p>
-      <h1 class="hero-name" id="hero-name">Federico<br>Patronis</h1>
-      <p class="hero-role">Operations Leader &nbsp;·&nbsp; Business Strategy &nbsp;·&nbsp; AI Enthusiast &nbsp;·&nbsp; Hincha de Boca</p>
+<section id="hero" aria-label="Hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">AI CONSULTANT</p>
+    <h1 class="hero-headline">AI systems that run your<br>operations while you sleep.</h1>
+    <p class="hero-sub">I build automation pipelines, AI agents, and operational infrastructure for businesses in real estate, fitness, and cross-border ventures. Based in Tampa. Working everywhere.</p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn-primary">See my work</a>
+      <a href="#contact" class="btn-outline">Let's talk</a>
     </div>
-
-    <a class="bento cell-linkedin" href="https://www.linkedin.com/in/federico-patronis/" target="_blank" rel="noopener noreferrer" aria-label="View Federico Patronis on LinkedIn (opens in new tab)">
-      <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="li-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="rgb(10,102,194)" aria-hidden="true"><path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.7A1.8 1.8 0 1 1 6.5 3a1.8 1.8 0 0 1 0 3.7zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg></div>
-        <p class="li-label">Connect on LinkedIn</p>
-        <p class="li-url">linkedin.com/in/federico-patronis</p>
-        <p class="li-location">📍 South Tampa, FL &nbsp;·&nbsp; UTC−5 &nbsp;·&nbsp; Remote-ready</p>
-        <div class="li-flags" aria-label="Languages: Spanish, English, Portuguese, Italian">
-          <img src="https://flagcdn.com/24x18/ar.png" alt="Spanish" title="Spanish" class="li-flag">
-          <img src="https://flagcdn.com/24x18/us.png" alt="English" title="English" class="li-flag">
-          <img src="https://flagcdn.com/24x18/br.png" alt="Portuguese" title="Portuguese" class="li-flag">
-          <img src="https://flagcdn.com/24x18/it.png" alt="Italian" title="Italian" class="li-flag">
-        </div>
-      </div>
-    </a>
   </div>
 </section>
 
