@@ -208,36 +208,23 @@ nav{position:sticky;top:0;z-index:100;background:#141414;border-bottom:1px solid
 /* SCOUT ── */
 .scout-video-wrap{overflow:hidden;background:#000;margin-top:1.5rem;aspect-ratio:16/9}
 .scout-video{width:100%;height:100%;display:block}
-.scout-step-wrap{display:flex;flex-direction:column;gap:2rem;margin:2.5rem 0;padding-left:2rem;border-left:1px solid #2a2620}
-.scout-step-item{position:relative;padding-left:.75rem}
-.scout-step-dot{position:absolute;left:-2.5rem;top:3px;width:8px;height:8px;border:1px solid #b8a98a;background:#141414}
-.scout-step-label{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#6a5a40;font-family:var(--sans)}
-.scout-step-title{font-size:13px;color:#E8DFC8;margin-top:.3rem;font-family:var(--sans)}
-.scout-step-sub{font-size:12px;color:#5a5040;margin-top:.25rem;line-height:1.6}
-.scout-stats-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid #242424;margin:2rem 0}
-.scout-stat-box{padding:1.5rem 1.25rem;text-align:center;border-right:1px solid #242424;border-bottom:1px solid #242424}
-.scout-stat-box:nth-child(2n){border-right:none}
-.scout-stat-box:nth-last-child(-n+2){border-bottom:none}
-.scout-stat-val{font-family:var(--serif);font-size:28px;font-weight:400;color:#E8DFC8;line-height:1}
-.scout-stat-lbl{font-size:10px;text-transform:uppercase;letter-spacing:3px;color:#4a4030;margin-top:.5rem}
-.scout-report-label{font-size:10px;font-weight:600;color:#666;letter-spacing:3px;text-transform:uppercase;margin-bottom:.75rem}
-.scout-cards{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.5rem}
-.scout-card{display:flex;align-items:center;gap:1rem;background:#1a1814;border:1px solid #242424;overflow:hidden;transition:border-color .3s}
-.scout-card:hover{border-color:#b8a98a}
-.scout-card-signal{width:4px;height:100%;min-height:72px;flex-shrink:0}
-.scout-card-signal.move{background:#22c55e}
-.scout-card-signal.push{background:#ef4444}
-.scout-card-signal.wait{background:#f59e0b}
-.scout-card-body{flex:1;padding:0.875rem 0.5rem}
-.scout-card-hood{font-size:10px;color:#666;letter-spacing:2px;text-transform:uppercase}
-.scout-card-price{font-size:1.1rem;font-weight:700;color:#E8DFC8;font-family:var(--mono);margin:0.2rem 0}
-.scout-card-meta{font-size:0.78rem;color:#666}
-.scout-card-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;padding-right:1rem}
-.scout-sig-pill{font-size:.72rem;font-weight:700;padding:.3rem .75rem;letter-spacing:.04em;white-space:nowrap}
-.scout-sig-pill.move{background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.25)}
-.scout-sig-pill.push{background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.25)}
-.scout-sig-pill.wait{background:rgba(245,158,11,0.12);color:#f59e0b;border:1px solid rgba(245,158,11,0.25)}
-.scout-vision{font-size:.72rem;color:#666;font-family:var(--mono)}
+.scout-intro{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:640px;margin:2rem 0}
+.scout-pipeline-wrap{overflow-x:auto;margin:2rem 0 2.5rem;padding-bottom:.5rem}
+.scout-pipeline{display:flex;align-items:stretch;min-width:max-content;gap:0}
+.scout-pipeline-node{background:#1c1c1c;border:1px solid #2a2a2a;padding:16px 20px;border-radius:6px;min-width:130px;display:flex;flex-direction:column;justify-content:flex-start}
+.scout-pipeline-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#10b981;font-family:var(--mono);margin-bottom:.3rem}
+.scout-pipeline-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:.2rem;line-height:1.3}
+.scout-pipeline-sub{font-size:12px;color:#666;line-height:1.5}
+.scout-pipeline-arrow{color:#10b981;font-size:18px;padding:0 8px;flex-shrink:0;align-self:center;line-height:1}
+.scout-arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+.scout-arch-block{background:#1c1c1c;border:1px solid #2a2a2a;padding:28px;border-radius:6px}
+.scout-arch-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#10b981;font-family:var(--mono);margin-bottom:.75rem}
+.scout-arch-heading{font-size:15px;font-weight:600;color:#fff;margin-bottom:.75rem;line-height:1.3}
+.scout-arch-body{font-size:13px;color:#666;line-height:1.75}
+.scout-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:6px;overflow:hidden;margin:2.5rem 0}
+.scout-stat-item{background:#141414;padding:2rem 1.5rem;text-align:center}
+.scout-stat-big{font-family:var(--serif);font-size:48px;font-weight:400;color:#fff;line-height:1}
+.scout-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-top:.6rem;font-family:var(--sans)}
 .scout-email-card{display:flex;align-items:center;gap:1rem;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);padding:1.25rem}
 .scout-email-icon{width:42px;height:42px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .scout-email-from{font-size:.72rem;color:rgba(34,197,94,0.6);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.3rem}
@@ -245,10 +232,16 @@ nav{position:sticky;top:0;z-index:100;background:#141414;border-bottom:1px solid
 .scout-email-attach{display:flex;gap:.5rem;flex-wrap:wrap}
 .scout-attach{background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);padding:.2rem .6rem;font-size:.72rem;color:rgba(34,197,94,0.7);font-family:var(--mono)}
 
-@media(max-width:640px){
-  .scout-step-wrap{padding-left:1.5rem}
-  .scout-stats-grid{grid-template-columns:1fr 1fr}
-  .scout-card-meta{display:none}
+@media(max-width:768px){
+  .scout-pipeline{flex-direction:column;min-width:unset;align-items:stretch}
+  .scout-pipeline-arrow{display:none}
+  .scout-pipeline-node{border-radius:0;margin-bottom:0}
+  .scout-pipeline-node:first-child{border-radius:6px 6px 0 0}
+  .scout-pipeline-node:last-child{border-radius:0 0 6px 6px}
+  .scout-pipeline-node:not(:last-child){border-bottom:none;position:relative}
+  .scout-pipeline-node:not(:last-child)::after{content:'';display:block;width:1px;height:16px;background:#10b981;margin:.75rem auto 0}
+  .scout-arch-grid{grid-template-columns:1fr}
+  .scout-stats-row{grid-template-columns:1fr 1fr}
   .scout-email-card{flex-direction:column;text-align:center}
 }
 
@@ -443,89 +436,92 @@ footer a:hover{color:#E8DFC8}
   </video>
 </div>
 
-<div class="two-col">
-<div class="two-col-left">
-<!-- PIPELINE TIMELINE — vertical -->
-<div class="scout-step-wrap" aria-label="How the BA Scout pipeline works">
-  <div class="scout-step-item">
-    <div class="scout-step-dot"></div>
-    <div class="scout-step-label">Load memory</div>
-    <div class="scout-step-title">Persistent context</div>
-    <div class="scout-step-sub">listing_history.json · feedback_log · config</div>
+<!-- INTRO -->
+<p class="scout-intro">BA Scout is a fully autonomous agent that monitors 9 Buenos Aires neighborhoods for investment-grade apartments — scraping two platforms, deduplicating across sources, scoring every eligible listing with Claude Vision, and delivering a ranked PDF briefing every Monday morning. No manual input after setup.</p>
+
+<!-- PIPELINE FLOW -->
+<div class="scout-pipeline-wrap" aria-label="BA Scout pipeline steps">
+  <div class="scout-pipeline">
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">TRIGGER</div>
+      <div class="scout-pipeline-title">Task Scheduler</div>
+      <div class="scout-pipeline-sub">Monday 10:00 AM</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">SCRAPE</div>
+      <div class="scout-pipeline-title">Dual-source</div>
+      <div class="scout-pipeline-sub">MercadoLibre + Argenprop · 9 neighborhoods</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">DEDUPLICATE</div>
+      <div class="scout-pipeline-title">By listing ID</div>
+      <div class="scout-pipeline-sub">Cross-source collapse · seen_listings.json</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">FILTER</div>
+      <div class="scout-pipeline-title">Hard gates</div>
+      <div class="scout-pipeline-sub">50–90 m² · ≤ USD 200K · apartments only</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">VISION SCORE</div>
+      <div class="scout-pipeline-title">Claude Sonnet</div>
+      <div class="scout-pipeline-sub">Up to 5 images per listing</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">RANK</div>
+      <div class="scout-pipeline-title">Deal signals</div>
+      <div class="scout-pipeline-sub">Feedback-calibrated · confidence gate</div>
+    </div>
+    <div class="scout-pipeline-arrow">→</div>
+    <div class="scout-pipeline-node">
+      <div class="scout-pipeline-label">DELIVER</div>
+      <div class="scout-pipeline-title">PDF + Excel</div>
+      <div class="scout-pipeline-sub">Gmail OAuth · state files updated</div>
+    </div>
   </div>
-  <div class="scout-step-item">
-    <div class="scout-step-dot"></div>
-    <div class="scout-step-label">Scrape sources</div>
-    <div class="scout-step-title">9 neighborhoods, parallel</div>
-    <div class="scout-step-sub">MercadoLibre + Argenprop · 185 raw listings</div>
-  </div>
-  <div class="scout-step-item">
-    <div class="scout-step-dot"></div>
-    <div class="scout-step-label">Claude Vision</div>
-    <div class="scout-step-title">AI scoring per listing</div>
-    <div class="scout-step-sub">Score condition · amenities · classification</div>
-  </div>
-  <div class="scout-step-item">
-    <div class="scout-step-dot"></div>
-    <div class="scout-step-label">Deal signals</div>
-    <div class="scout-step-title">Price intelligence</div>
-    <div class="scout-step-sub">Price vs baseline · DOM · drops · feedback comps</div>
-  </div>
-  <div class="scout-step-item">
-    <div class="scout-step-dot"></div>
-    <div class="scout-step-label">Sunday briefing</div>
-    <div class="scout-step-title">Delivered to inbox</div>
-    <div class="scout-step-sub">PDF + Excel → Gmail · history updated</div>
-  </div>
-</div>
-</div><!-- /two-col-left -->
-<div class="two-col-right">
-<!-- STATS GRID -->
-<div class="scout-stats-grid">
-  <div class="scout-stat-box"><div class="scout-stat-val">185</div><div class="scout-stat-lbl">Raw listings</div></div>
-  <div class="scout-stat-box"><div class="scout-stat-val">31</div><div class="scout-stat-lbl">After filters</div></div>
-  <div class="scout-stat-box"><div class="scout-stat-val">31</div><div class="scout-stat-lbl">AI scored</div></div>
-  <div class="scout-stat-box"><div class="scout-stat-val">2</div><div class="scout-stat-lbl">Actionable</div></div>
 </div>
 
-<!-- SAMPLE REPORT CARDS -->
-<div class="scout-report-label">This week's briefing</div>
-<div class="scout-cards">
-  <div class="scout-card">
-    <div class="scout-card-signal move"></div>
-    <div class="scout-card-body">
-      <div class="scout-card-hood">Olivos</div>
-      <div class="scout-card-price">USD 138,000</div>
-      <div class="scout-card-meta">72 m² · USD 1,916/m² · 4 days on market</div>
-    </div>
-    <div class="scout-card-right">
-      <span class="scout-sig-pill move">Move Now</span>
-      <span class="scout-vision">Vision 8.1/10</span>
-    </div>
+<!-- ARCHITECTURE BLOCKS -->
+<div class="scout-arch-grid">
+  <div class="scout-arch-block">
+    <div class="scout-arch-label">DATA INGESTION</div>
+    <div class="scout-arch-heading">Dual-source scraping with deduplication</div>
+    <div class="scout-arch-body">Every Monday the agent scrapes MercadoLibre and Argenprop across 9 GBA Norte neighborhoods — typically 2,500–3,000 raw listings per run. Cross-source duplicates (same property on both platforms) are identified and collapsed by listing ID before any filtering occurs.</div>
   </div>
-  <div class="scout-card">
-    <div class="scout-card-signal push"></div>
-    <div class="scout-card-body">
-      <div class="scout-card-hood">Martínez</div>
-      <div class="scout-card-price">USD 172,000</div>
-      <div class="scout-card-meta">95 m² · USD 1,810/m² · 38 days · price ↓ 2×</div>
-    </div>
-    <div class="scout-card-right">
-      <span class="scout-sig-pill push">Push Hard</span>
-      <span class="scout-vision">Vision 7.4/10</span>
-    </div>
+  <div class="scout-arch-block">
+    <div class="scout-arch-label">AI ANALYSIS</div>
+    <div class="scout-arch-heading">Claude Vision scores every eligible listing</div>
+    <div class="scout-arch-body">Listings that pass the hard filters are sent to Claude Sonnet with up to 5 full-resolution images. The model scores kitchen, bathroom, flooring, ceiling height, natural light, and overall condition on a 1–10 scale. A confidence gate prevents low-quality assessments from surfacing as actionable signals.</div>
   </div>
-  <div class="scout-card">
-    <div class="scout-card-signal wait"></div>
-    <div class="scout-card-body">
-      <div class="scout-card-hood">La Lucila</div>
-      <div class="scout-card-price">USD 159,000</div>
-      <div class="scout-card-meta">68 m² · USD 2,338/m² · 6 days on market</div>
-    </div>
-    <div class="scout-card-right">
-      <span class="scout-sig-pill wait">Wait & Watch</span>
-      <span class="scout-vision">Vision 6.8/10</span>
-    </div>
+  <div class="scout-arch-block">
+    <div class="scout-arch-label">DELIVERY</div>
+    <div class="scout-arch-heading">Ranked briefing every Monday morning</div>
+    <div class="scout-arch-body">A ReportLab PDF and openpyxl Excel file are generated and sent via Gmail OAuth. Hot lead cards include full vision observations, price history, and Airbnb readiness. Six persistent JSON state files are updated every run — price history, neighborhood baselines, run log, and heartbeat.</div>
+  </div>
+</div>
+
+<!-- STATS ROW -->
+<div class="scout-stats-row">
+  <div class="scout-stat-item">
+    <div class="scout-stat-big">3,056</div>
+    <div class="scout-stat-label">Listings scraped last run</div>
+  </div>
+  <div class="scout-stat-item">
+    <div class="scout-stat-big">797</div>
+    <div class="scout-stat-label">Vision scored</div>
+  </div>
+  <div class="scout-stat-item">
+    <div class="scout-stat-big">~$0.66</div>
+    <div class="scout-stat-label">API cost per run</div>
+  </div>
+  <div class="scout-stat-item">
+    <div class="scout-stat-big">3h 17m</div>
+    <div class="scout-stat-label">Full pipeline runtime</div>
   </div>
 </div>
 
@@ -543,8 +539,6 @@ footer a:hover{color:#E8DFC8}
     </div>
   </div>
 </div>
-</div><!-- /two-col-right -->
-</div><!-- /two-col -->
 </div><!-- /scout -->
 <div class="section proj-detail" id="profe">
   <p class="sec-eyebrow">AI FITNESS PRODUCT</p>
