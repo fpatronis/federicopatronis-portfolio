@@ -209,13 +209,6 @@ nav{position:sticky;top:0;z-index:100;background:#141414;border-bottom:1px solid
 .scout-video-wrap{overflow:hidden;background:#000;margin-top:1.5rem;aspect-ratio:16/9}
 .scout-video{width:100%;height:100%;display:block}
 .scout-intro{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:640px;margin:2rem 0}
-.scout-pipeline-wrap{overflow-x:auto;margin:2rem 0 2.5rem;padding-bottom:.5rem}
-.scout-pipeline{display:flex;align-items:stretch;min-width:max-content;gap:0}
-.scout-pipeline-node{background:#1c1c1c;border:1px solid #2a2a2a;padding:16px 20px;border-radius:6px;min-width:130px;display:flex;flex-direction:column;justify-content:flex-start}
-.scout-pipeline-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#10b981;font-family:var(--mono);margin-bottom:.3rem}
-.scout-pipeline-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:.2rem;line-height:1.3}
-.scout-pipeline-sub{font-size:12px;color:#666;line-height:1.5}
-.scout-pipeline-arrow{color:#10b981;font-size:18px;padding:0 8px;flex-shrink:0;align-self:center;line-height:1}
 .scout-arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
 .scout-arch-block{background:#1c1c1c;border:1px solid #2a2a2a;padding:28px;border-radius:6px}
 .scout-arch-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#10b981;font-family:var(--mono);margin-bottom:.75rem}
@@ -225,24 +218,12 @@ nav{position:sticky;top:0;z-index:100;background:#141414;border-bottom:1px solid
 .scout-stat-item{background:#141414;padding:2rem 1.5rem;text-align:center}
 .scout-stat-big{font-family:var(--serif);font-size:48px;font-weight:400;color:#fff;line-height:1}
 .scout-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-top:.6rem;font-family:var(--sans)}
-.scout-email-card{display:flex;align-items:center;gap:1rem;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);padding:1.25rem}
-.scout-email-icon{width:42px;height:42px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.scout-email-from{font-size:.72rem;color:rgba(34,197,94,0.6);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.3rem}
-.scout-email-subj{font-size:.95rem;font-weight:600;color:#22c55e;margin-bottom:.5rem}
-.scout-email-attach{display:flex;gap:.5rem;flex-wrap:wrap}
-.scout-attach{background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);padding:.2rem .6rem;font-size:.72rem;color:rgba(34,197,94,0.7);font-family:var(--mono)}
+.scout-funnel-wrap { margin: 2.5rem 0; width: 100%; }
+.scout-funnel-wrap svg { width: 100%; height: auto; display: block; }
 
 @media(max-width:768px){
-  .scout-pipeline{flex-direction:column;min-width:unset;align-items:stretch}
-  .scout-pipeline-arrow{display:none}
-  .scout-pipeline-node{border-radius:0;margin-bottom:0}
-  .scout-pipeline-node:first-child{border-radius:6px 6px 0 0}
-  .scout-pipeline-node:last-child{border-radius:0 0 6px 6px}
-  .scout-pipeline-node:not(:last-child){border-bottom:none;position:relative}
-  .scout-pipeline-node:not(:last-child)::after{content:'';display:block;width:1px;height:16px;background:#10b981;margin:.75rem auto 0}
   .scout-arch-grid{grid-template-columns:1fr}
   .scout-stats-row{grid-template-columns:1fr 1fr}
-  .scout-email-card{flex-direction:column;text-align:center}
 }
 
 /* ── CONTACT ── */
@@ -436,54 +417,101 @@ footer a:hover{color:#E8DFC8}
   </video>
 </div>
 
-<!-- INTRO -->
-<p class="scout-intro">BA Scout is a fully autonomous agent that monitors 9 Buenos Aires neighborhoods for investment-grade apartments — scraping two platforms, deduplicating across sources, scoring every eligible listing with Claude Vision, and delivering a ranked PDF briefing every Monday morning. No manual input after setup.</p>
+<div class="scout-funnel-wrap">
+  <svg viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg">
 
-<!-- PIPELINE FLOW -->
-<div class="scout-pipeline-wrap" aria-label="BA Scout pipeline steps">
-  <div class="scout-pipeline">
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">TRIGGER</div>
-      <div class="scout-pipeline-title">Task Scheduler</div>
-      <div class="scout-pipeline-sub">Monday 10:00 AM</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">SCRAPE</div>
-      <div class="scout-pipeline-title">Dual-source</div>
-      <div class="scout-pipeline-sub">MercadoLibre + Argenprop · 9 neighborhoods</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">DEDUPLICATE</div>
-      <div class="scout-pipeline-title">By listing ID</div>
-      <div class="scout-pipeline-sub">Cross-source collapse · seen_listings.json</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">FILTER</div>
-      <div class="scout-pipeline-title">Hard gates</div>
-      <div class="scout-pipeline-sub">50–90 m² · ≤ USD 200K · apartments only</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">VISION SCORE</div>
-      <div class="scout-pipeline-title">Claude Sonnet</div>
-      <div class="scout-pipeline-sub">Up to 5 images per listing</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">RANK</div>
-      <div class="scout-pipeline-title">Deal signals</div>
-      <div class="scout-pipeline-sub">Feedback-calibrated · confidence gate</div>
-    </div>
-    <div class="scout-pipeline-arrow">→</div>
-    <div class="scout-pipeline-node">
-      <div class="scout-pipeline-label">DELIVER</div>
-      <div class="scout-pipeline-title">PDF + Excel</div>
-      <div class="scout-pipeline-sub">Gmail OAuth · state files updated</div>
-    </div>
-  </div>
+    <!-- SCRAPE — 520px wide -->
+    <rect x="80" y="20" width="520" height="70" rx="6" fill="#1c1c1c" stroke="#2a2a2a" stroke-width="0.5"/>
+    <text x="96" y="40" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#10b981" text-decoration="none">SCRAPE</text>
+    <text x="340" y="46" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">MercadoLibre + Argenprop · 9 neighborhoods</text>
+    <text x="340" y="68" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">Monday 10:00 AM · Windows Task Scheduler</text>
+    <rect x="530" y="30" width="60" height="48" rx="4" fill="#0a2a1e"/>
+    <text x="560" y="50" text-anchor="middle" font-family="inherit" font-size="18" font-weight="600" fill="#10b981" dominant-baseline="central">3,056</text>
+    <text x="560" y="68" text-anchor="middle" font-family="inherit" font-size="10" fill="#4db6ac" dominant-baseline="central">scraped</text>
+
+    <!-- Connector -->
+    <line x1="340" y1="90" x2="340" y2="118" stroke="#10b981" stroke-width="0.8"/>
+    <polygon points="335,118 345,118 340,126" fill="#10b981"/>
+    <rect x="210" y="95" width="260" height="18" rx="3" fill="#0a1f14"/>
+    <text x="340" y="104" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#4db6ac" dominant-baseline="central">−304 cross-source duplicates removed</text>
+
+    <!-- DEDUPLICATE — 460px wide -->
+    <rect x="110" y="128" width="460" height="70" rx="6" fill="#1c1c1c" stroke="#2a2a2a" stroke-width="0.5"/>
+    <text x="126" y="148" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#10b981">DEDUPLICATE</text>
+    <text x="340" y="154" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">By listing ID · cross-source collapse</text>
+    <text x="340" y="176" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">seen_listings.json · same property on both platforms merged</text>
+    <rect x="514" y="138" width="46" height="48" rx="4" fill="#0a2a1e"/>
+    <text x="537" y="158" text-anchor="middle" font-family="inherit" font-size="18" font-weight="600" fill="#10b981" dominant-baseline="central">2,752</text>
+    <text x="537" y="176" text-anchor="middle" font-family="inherit" font-size="10" fill="#4db6ac" dominant-baseline="central">unique</text>
+
+    <!-- Connector -->
+    <line x1="340" y1="198" x2="340" y2="226" stroke="#10b981" stroke-width="0.8"/>
+    <polygon points="335,226 345,226 340,234" fill="#10b981"/>
+    <rect x="196" y="203" width="288" height="18" rx="3" fill="#0a1f14"/>
+    <text x="340" y="212" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#4db6ac" dominant-baseline="central">−1,520 outside size / budget / type criteria</text>
+
+    <!-- FILTER — 400px wide -->
+    <rect x="140" y="236" width="400" height="70" rx="6" fill="#1c1c1c" stroke="#2a2a2a" stroke-width="0.5"/>
+    <text x="156" y="256" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#10b981">FILTER</text>
+    <text x="340" y="262" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">Hard gates applied</text>
+    <text x="340" y="284" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">50–90 m² · ≤ USD 200K · apartments only · assertion check</text>
+    <rect x="494" y="246" width="40" height="48" rx="4" fill="#0a2a1e"/>
+    <text x="514" y="266" text-anchor="middle" font-family="inherit" font-size="18" font-weight="600" fill="#10b981" dominant-baseline="central">1,232</text>
+    <text x="514" y="284" text-anchor="middle" font-family="inherit" font-size="10" fill="#4db6ac" dominant-baseline="central">passed</text>
+
+    <!-- Connector -->
+    <line x1="340" y1="306" x2="340" y2="334" stroke="#7f77dd" stroke-width="0.8"/>
+    <polygon points="335,334 345,334 340,342" fill="#7f77dd"/>
+    <rect x="202" y="311" width="276" height="18" rx="3" fill="#1a1a2e"/>
+    <text x="340" y="320" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#afa9ec" dominant-baseline="central">Claude Sonnet · up to 5 images per listing</text>
+
+    <!-- VISION SCORE — 340px wide -->
+    <rect x="170" y="344" width="340" height="70" rx="6" fill="#1c1c1c" stroke="#534ab7" stroke-width="0.5"/>
+    <text x="186" y="364" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#7f77dd">VISION SCORE</text>
+    <text x="340" y="370" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">Claude Sonnet scores each listing</text>
+    <text x="340" y="392" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">Kitchen · bathroom · flooring · light · condition 1–10</text>
+    <rect x="464" y="354" width="38" height="48" rx="4" fill="#1a1a2e"/>
+    <text x="483" y="374" text-anchor="middle" font-family="inherit" font-size="18" font-weight="600" fill="#afa9ec" dominant-baseline="central">797</text>
+    <text x="483" y="392" text-anchor="middle" font-family="inherit" font-size="10" fill="#7f77dd" dominant-baseline="central">scored</text>
+
+    <!-- Connector -->
+    <line x1="340" y1="414" x2="340" y2="442" stroke="#7f77dd" stroke-width="0.8"/>
+    <polygon points="335,442 345,442 340,450" fill="#7f77dd"/>
+    <rect x="218" y="419" width="244" height="18" rx="3" fill="#1a1a2e"/>
+    <text x="340" y="428" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#afa9ec" dominant-baseline="central">Feedback calibration · confidence gate</text>
+
+    <!-- RANK — 280px wide -->
+    <rect x="200" y="452" width="280" height="70" rx="6" fill="#1c1c1c" stroke="#534ab7" stroke-width="0.5"/>
+    <text x="216" y="472" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#7f77dd">RANK</text>
+    <text x="340" y="478" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">Deal signal engine</text>
+    <text x="340" y="500" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">Hot lead · Strong signal · Watch · Skip</text>
+    <rect x="432" y="462" width="38" height="48" rx="4" fill="#1a1a2e"/>
+    <text x="451" y="482" text-anchor="middle" font-family="inherit" font-size="18" font-weight="600" fill="#afa9ec" dominant-baseline="central">29</text>
+    <text x="451" y="500" text-anchor="middle" font-family="inherit" font-size="10" fill="#7f77dd" dominant-baseline="central">signals</text>
+
+    <!-- Connector -->
+    <line x1="340" y1="522" x2="340" y2="550" stroke="#b8a030" stroke-width="0.8"/>
+    <polygon points="335,550 345,550 340,558" fill="#b8a030"/>
+    <rect x="202" y="527" width="276" height="18" rx="3" fill="#1f1a04"/>
+    <text x="340" y="536" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#c8a840" dominant-baseline="central">ReportLab PDF + openpyxl Excel → Gmail OAuth</text>
+
+    <!-- DELIVER — 220px wide -->
+    <rect x="220" y="560" width="220" height="70" rx="6" fill="#1c1c1c" stroke="#854f0b" stroke-width="0.5"/>
+    <text x="236" y="580" font-family="'SF Mono','Fira Code',monospace" font-size="10" letter-spacing="1.5" fill="#ba7517">DELIVER</text>
+    <text x="330" y="586" text-anchor="middle" font-family="inherit" font-size="13" font-weight="600" fill="#ffffff" dominant-baseline="central">PDF + Excel briefing</text>
+    <text x="330" y="608" text-anchor="middle" font-family="inherit" font-size="11" fill="#666666" dominant-baseline="central">Gmail OAuth · 6 state files updated</text>
+    <rect x="394" y="570" width="52" height="48" rx="4" fill="#1f1a04"/>
+    <text x="420" y="590" text-anchor="middle" font-family="inherit" font-size="14" font-weight="600" fill="#fac775" dominant-baseline="central">~$0.66</text>
+    <text x="420" y="608" text-anchor="middle" font-family="inherit" font-size="10" fill="#ba7517" dominant-baseline="central">API cost</text>
+
+    <!-- Funnel edge lines -->
+    <line x1="80" y1="20" x2="220" y2="560" stroke="#2a2a2a" stroke-width="0.5" opacity="0.5"/>
+    <line x1="600" y1="20" x2="440" y2="560" stroke="#2a2a2a" stroke-width="0.5" opacity="0.5"/>
+
+    <!-- Runtime note -->
+    <text x="340" y="660" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" fill="#444444">full pipeline runtime · 3h 17m · last run June 8 2026</text>
+
+  </svg>
 </div>
 
 <!-- ARCHITECTURE BLOCKS -->
@@ -525,20 +553,7 @@ footer a:hover{color:#E8DFC8}
   </div>
 </div>
 
-<!-- EMAIL CARD -->
-<div class="scout-email-card">
-  <div class="scout-email-icon">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-  </div>
-  <div class="scout-email-body">
-    <div class="scout-email-from">BA Scout → Federico Patronis · Every Sunday 10 AM</div>
-    <div class="scout-email-subj">Scout report — 2 properties worth your attention</div>
-    <div class="scout-email-attach">
-      <span class="scout-attach">scout_report_20260521.pdf</span>
-      <span class="scout-attach">scout_data_20260521.xlsx</span>
-    </div>
-  </div>
-</div>
+
 </div><!-- /scout -->
 <div class="section proj-detail" id="profe">
   <p class="sec-eyebrow">AI FITNESS PRODUCT</p>
